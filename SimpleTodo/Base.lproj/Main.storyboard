@@ -71,9 +71,34 @@
                     <view key="view" contentMode="scaleToFill" id="uXs-gl-fkj">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j7o-ln-1SV">
+                                <rect key="frame" x="259" y="164" width="83" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <size key="titleShadowOffset" width="2" height="2"/>
+                                <state key="normal" title="loading..."/>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" text="App Upgrade" translatesAutoresizingMaskIntoConstraints="NO" id="6Mp-BW-muO">
+                                <rect key="frame" x="30" y="114" width="540" height="0.0"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="j7o-ln-1SV" firstAttribute="centerX" secondItem="uXs-gl-fkj" secondAttribute="centerX" id="AIV-xI-tGM"/>
+                            <constraint firstAttribute="trailing" secondItem="6Mp-BW-muO" secondAttribute="trailing" constant="30" id="B8R-y6-9mF"/>
+                            <constraint firstItem="j7o-ln-1SV" firstAttribute="top" secondItem="6Mp-BW-muO" secondAttribute="bottom" constant="50" id="P1Z-Qo-ZuS"/>
+                            <constraint firstItem="6Mp-BW-muO" firstAttribute="leading" secondItem="uXs-gl-fkj" secondAttribute="leading" constant="30" id="ff7-qM-dvE"/>
+                            <constraint firstItem="6Mp-BW-muO" firstAttribute="top" secondItem="3il-CV-qr6" secondAttribute="bottom" constant="50" id="wu0-H1-za1"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="In-App Purchase" id="R6Z-Jp-fDT"/>
+                    <connections>
+                        <outlet property="purchaseButton" destination="j7o-ln-1SV" id="2r7-Py-K9j"/>
+                        <outlet property="textView" destination="6Mp-BW-muO" id="ZKz-Dj-lno"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bX5-zs-Kuf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

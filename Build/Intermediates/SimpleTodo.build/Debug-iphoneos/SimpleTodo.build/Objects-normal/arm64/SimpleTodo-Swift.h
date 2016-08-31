@@ -98,6 +98,7 @@ typedef int swift_int4  __attribute__((__ext_vector_type__(4)));
 @import CoreData;
 @import ObjectiveC;
 @import Foundation;
+@import StoreKit;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -254,9 +255,12 @@ SWIFT_CLASS("_TtC10SimpleTodo18MainViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UIButton;
 
 SWIFT_CLASS("_TtC10SimpleTodo22PurchaseViewController")
 @interface PurchaseViewController : UIViewController
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified purchaseButton;
+@property (nonatomic, weak) IBOutlet UITextView * _Null_unspecified textView;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
@@ -296,6 +300,26 @@ SWIFT_CLASS("_TtC10SimpleTodo21SettingViewController")
 
 /// For typical purpose, use "public func fadeOut(type: FadeType = .Normal, completed: (() -> ())? = nil)" instead of this
 - (void)fadeOut:(NSTimeInterval)duration completed:(void (^ _Nullable)(void))completed;
+@end
+
+@class SKProduct;
+@class NSError;
+@class SKProductsRequest;
+@class SKProductsResponse;
+@class SKRequest;
+
+SWIFT_CLASS("_TtC10SimpleTodo17XXXProductManager")
+@interface XXXProductManager : NSObject <SKProductsRequestDelegate, SKRequestDelegate>
+
+/// 課金アイテム情報を取得
++ (void)productsWithProductIdentifiers:(NSArray<NSString *> * _Null_unspecified)productIdentifiers completion:(void (^ _Nullable)(NSArray<SKProduct *> * _Null_unspecified, NSError * _Nullable))completion;
+- (void)productsRequest:(SKProductsRequest * _Nonnull)request didReceiveResponse:(SKProductsResponse * _Nonnull)response;
+- (void)request:(SKRequest * _Nonnull)request didFailWithError:(NSError * _Nonnull)error;
+- (void)requestDidFinish:(SKRequest * _Nonnull)request;
+
+/// おまけ 価格情報を抽出
++ (NSString * _Nonnull)priceStringFromProduct:(SKProduct * _Null_unspecified)product;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 #pragma clang diagnostic pop

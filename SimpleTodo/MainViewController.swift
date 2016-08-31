@@ -112,12 +112,13 @@ class MainViewController:  UIViewController , UITableViewDataSource , UITableVie
         
         tableView.reloadData()
         
+        //navigationController!.navigationBar.tintColor = UIColor.blackColor()
+        
         
         if userDefaults.boolForKey("showAd") {
             self.view.addSubview(bannerView!)
             
             btmToolBarConstraint.constant = 50
-            
             
         } else {
             
