@@ -19,8 +19,6 @@ class MainViewController:  UIViewController , UITableViewDataSource , UITableVie
     
     @IBOutlet weak var popMessageView: UIView!
     
-    @IBOutlet weak var firstView: UIView!
-    
     var appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
     let userDefaults = NSUserDefaults.standardUserDefaults()
@@ -28,6 +26,9 @@ class MainViewController:  UIViewController , UITableViewDataSource , UITableVie
     let gadController = GadController()
     
     var bannerView:GADBannerView? = nil
+    
+    @IBOutlet weak var btmToolBarConstraint: NSLayoutConstraint!
+    
     
     lazy var fetchedResultsController: NSFetchedResultsController = {
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
@@ -74,13 +75,15 @@ class MainViewController:  UIViewController , UITableViewDataSource , UITableVie
             UIApplication.sharedApplication().applicationIconBadgeNumber = -1
         }
         
-        /*
-        navigationBar.barTintColor = UIColor(red: 28 / 255, green: 67 / 255, blue: 155 / 255, alpha: 1.0)
-        navigationBar.tintColor = UIColor.whiteColor()
+        
+        navigationController!.navigationBar.barTintColor = UIColor(red: 28 / 255, green: 67 / 255, blue: 155 / 255, alpha: 1.0)
+        navigationController!.navigationBar.tintColor = UIColor.whiteColor()
+        navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         
         btmToolBar.barTintColor = UIColor(red: 28 / 255, green: 67 / 255, blue: 155 / 255, alpha: 1.0)
         btmToolBar.tintColor = UIColor.whiteColor()
-        */
+        
+        
         
         //セル長押し設定
         let longPressRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(MainViewController.cellLongPressed(_:)))
@@ -88,8 +91,6 @@ class MainViewController:  UIViewController , UITableViewDataSource , UITableVie
         tableView.addGestureRecognizer(longPressRecognizer)
         
         //self.view.frame.size.height
-        
-        
         
         if userDefaults.boolForKey("firstLaunch") {
             setFirstItemData("＋ボタンを押してデータを追加してください", checked: 0)
@@ -103,43 +104,32 @@ class MainViewController:  UIViewController , UITableViewDataSource , UITableVie
         
         popMessageView.layer.cornerRadius = 10
         
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        btmToolBar.translatesAutoresizingMaskIntoConstraints = false
+        
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        
         tableView.reloadData()
-        
-        let tableViewConstraintIsAddBottom = NSLayoutConstraint(item: tableView, attribute: NSLayoutAttribute.Bottom, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.Bottom, multiplier: 1.0, constant: -95)
-        
-        let btmToolBarConstraintIsAdd = NSLayoutConstraint(item: btmToolBar, attribute: NSLayoutAttribute.Bottom, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.Bottom, multiplier: 1.0, constant: -50)
-        
-        let tableViewConstraintNoAddBottom = NSLayoutConstraint(item: tableView, attribute: NSLayoutAttribute.Bottom, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.Bottom, multiplier: 1.0, constant: -45)
-        
-        let btmToolBarConstraintNoAdd = NSLayoutConstraint(item: btmToolBar, attribute: NSLayoutAttribute.Bottom, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.Bottom, multiplier: 1.0, constant: 0)
         
         
         if userDefaults.boolForKey("showAd") {
             self.view.addSubview(bannerView!)
-            self.view.addConstraint(tableViewConstraintIsAddBottom)
-            self.view.addConstraint(btmToolBarConstraintIsAdd)
-            self.view.updateConstraints()
+            
+            btmToolBarConstraint.constant = 50
+            
             
         } else {
-            self.view.addConstraints([tableViewConstraintNoAddBottom,btmToolBarConstraintNoAdd])
-            /*
-            self.view.addConstraint(tableViewConstraintNoAddBottom)
-            self.view.addConstraint(btmToolBarConstraintNoAdd)
-            */
-            self.view.updateConstraints()
+            
             bannerView!.removeFromSuperview()
+            
+            btmToolBarConstraint.constant = 0
+            
         }
-        
-        
-        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
     }
     
     /*
@@ -263,6 +253,8 @@ class MainViewController:  UIViewController , UITableViewDataSource , UITableVie
             label?.attributedText = attributeString
         }
         
+        cell.frame = cell.bounds
+        cell.contentView.autoresizingMask = [.FlexibleWidth,.FlexibleHeight]
         
         return cell
     }

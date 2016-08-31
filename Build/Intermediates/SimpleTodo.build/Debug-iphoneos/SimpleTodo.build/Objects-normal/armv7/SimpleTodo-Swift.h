@@ -230,7 +230,6 @@ SWIFT_CLASS("_TtC10SimpleTodo18MainViewController")
 @property (nonatomic, strong) NSFetchedResultsController * _Nonnull fetchedResultsController;
 - (void)viewDidLoad;
 - (void)viewWillAppear:(BOOL)animated;
-- (void)updateViewConstraints;
 - (void)didReceiveMemoryWarning;
 - (void)controllerDidChangeContent:(NSFetchedResultsController * _Nonnull)controller;
 - (NSInteger)setBadgeValue;

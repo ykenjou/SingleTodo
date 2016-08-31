@@ -216,20 +216,22 @@ SWIFT_CLASS("_TtC10SimpleTodo4Item")
 @class UITableViewRowAction;
 @class UIToolbar;
 @class UIView;
+@class NSLayoutConstraint;
 
 SWIFT_CLASS("_TtC10SimpleTodo18MainViewController")
 @interface MainViewController : UIViewController <GADAdDelegate, NSFetchedResultsControllerDelegate, GADBannerViewDelegate, UINavigationControllerDelegate, UITableViewDataSource, UIScrollViewDelegate, UITableViewDelegate, UIGestureRecognizerDelegate>
 @property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified tableView;
 @property (nonatomic, weak) IBOutlet UIToolbar * _Null_unspecified btmToolBar;
 @property (nonatomic, weak) IBOutlet UIView * _Null_unspecified popMessageView;
-@property (nonatomic, weak) IBOutlet UIView * _Null_unspecified firstView;
 @property (nonatomic, strong) AppDelegate * _Nonnull appDelegate;
 @property (nonatomic, readonly, strong) NSUserDefaults * _Nonnull userDefaults;
 @property (nonatomic, readonly, strong) GadController * _Nonnull gadController;
 @property (nonatomic, strong) GADBannerView * _Nullable bannerView;
+@property (nonatomic, weak) IBOutlet NSLayoutConstraint * _Null_unspecified btmToolBarConstraint;
 @property (nonatomic, strong) NSFetchedResultsController * _Nonnull fetchedResultsController;
 - (void)viewDidLoad;
 - (void)viewWillAppear:(BOOL)animated;
+- (void)viewDidAppear:(BOOL)animated;
 - (void)didReceiveMemoryWarning;
 - (void)controllerDidChangeContent:(NSFetchedResultsController * _Nonnull)controller;
 - (NSInteger)setBadgeValue;

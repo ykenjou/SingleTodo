@@ -143,14 +143,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9aU-yU-HTd">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9aU-yU-HTd">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="gvH-WU-0lA"/>
-                                </constraints>
                                 <items/>
                             </toolbar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JUN-pS-Esn">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JUN-pS-Esn">
                                 <rect key="frame" x="0.0" y="65" width="600" height="490"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -213,41 +210,18 @@
                                     <constraint firstAttribute="bottom" secondItem="mwT-hB-chn" secondAttribute="bottom" constant="14" id="eVV-Gd-87n"/>
                                 </constraints>
                             </view>
-                            <view hidden="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wGs-HC-li0">
-                                <rect key="frame" x="0.0" y="64" width="600" height="491"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="You push + button, and please add an item" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yWd-JV-KVS">
-                                        <rect key="frame" x="20" y="351" width="560" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="u6r-04-mMY"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="JMc-oV-fhK">
-                                        <rect key="frame" x="280" y="441" width="40" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="40" id="AAn-YI-R27"/>
-                                            <constraint firstAttribute="height" constant="40" id="JXN-yP-Cfw"/>
-                                        </constraints>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="wGs-HC-li0" secondAttribute="trailing" id="0xr-TO-GWG"/>
-                            <constraint firstItem="wGs-HC-li0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Cad-ca-ASz"/>
+                            <constraint firstItem="9aU-yU-HTd" firstAttribute="top" secondItem="JUN-pS-Esn" secondAttribute="bottom" constant="1" id="4Fd-Sf-7qY"/>
                             <constraint firstItem="2JG-OU-aYC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="100" id="GRg-jf-BUM"/>
-                            <constraint firstItem="9aU-yU-HTd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Ido-ho-bee"/>
-                            <constraint firstAttribute="trailing" secondItem="9aU-yU-HTd" secondAttribute="trailing" id="K0M-pS-Ikc"/>
+                            <constraint firstItem="JUN-pS-Esn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Q9C-ko-G0u"/>
                             <constraint firstItem="2JG-OU-aYC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="100" id="Qxq-zV-HbA"/>
-                            <constraint firstItem="JUN-pS-Esn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="1" id="aja-RS-wIa"/>
-                            <constraint firstItem="wGs-HC-li0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="g49-6k-C4D"/>
-                            <constraint firstAttribute="trailing" secondItem="JUN-pS-Esn" secondAttribute="trailing" id="kJy-Pf-daf"/>
-                            <constraint firstItem="JUN-pS-Esn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ldV-g3-DVS"/>
+                            <constraint firstItem="JUN-pS-Esn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="1" id="YN5-2b-wky"/>
+                            <constraint firstAttribute="trailing" secondItem="JUN-pS-Esn" secondAttribute="trailing" id="aj9-hE-xcm"/>
+                            <constraint firstItem="9aU-yU-HTd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bTm-9q-VvC"/>
+                            <constraint firstAttribute="trailing" secondItem="9aU-yU-HTd" secondAttribute="trailing" id="qgZ-BX-zlj"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="9aU-yU-HTd" secondAttribute="bottom" id="wzK-xB-hLH"/>
                             <constraint firstAttribute="trailing" secondItem="2JG-OU-aYC" secondAttribute="trailing" constant="86" id="yJh-0z-CVS"/>
                         </constraints>
                     </view>
@@ -262,7 +236,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="btmToolBar" destination="9aU-yU-HTd" id="88I-Qt-qfV"/>
-                        <outlet property="firstView" destination="wGs-HC-li0" id="ESe-gc-JVE"/>
+                        <outlet property="btmToolBarConstraint" destination="wzK-xB-hLH" id="4g1-nT-PzP"/>
                         <outlet property="popMessageView" destination="2JG-OU-aYC" id="ey4-A1-4ad"/>
                         <outlet property="tableView" destination="JUN-pS-Esn" id="mFf-b2-e0j"/>
                     </connections>
@@ -514,6 +488,5 @@
     </scenes>
     <resources>
         <image name="SettingIcon" width="26" height="26"/>
-        <image name="arrow.png" width="200" height="200"/>
     </resources>
 </document>
