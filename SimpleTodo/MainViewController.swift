@@ -79,9 +79,11 @@ class MainViewController:  UIViewController , UITableViewDataSource , UITableVie
         navigationController!.navigationBar.barTintColor = UIColor(red: 28 / 255, green: 67 / 255, blue: 155 / 255, alpha: 1.0)
         navigationController!.navigationBar.tintColor = UIColor.whiteColor()
         navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        navigationController!.navigationBar.translucent = false
         
         btmToolBar.barTintColor = UIColor(red: 28 / 255, green: 67 / 255, blue: 155 / 255, alpha: 1.0)
         btmToolBar.tintColor = UIColor.whiteColor()
+        btmToolBar.translucent = false
         
         
         
@@ -115,16 +117,17 @@ class MainViewController:  UIViewController , UITableViewDataSource , UITableVie
         //navigationController!.navigationBar.tintColor = UIColor.blackColor()
         
         
-        if userDefaults.boolForKey("showAd") {
-            self.view.addSubview(bannerView!)
-            
-            btmToolBarConstraint.constant = 50
-            
-        } else {
+        if userDefaults.boolForKey("upgrade") {
             
             bannerView!.removeFromSuperview()
             
             btmToolBarConstraint.constant = 0
+            
+        } else {
+            
+            self.view.addSubview(bannerView!)
+            
+            btmToolBarConstraint.constant = 50
             
         }
     }

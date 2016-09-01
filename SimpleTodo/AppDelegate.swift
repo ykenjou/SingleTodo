@@ -9,10 +9,11 @@
 import UIKit
 import CoreData
 import Firebase
+import StoreKit
 
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate ,XXXPurchaseManagerDelegate {
 
     var window: UIWindow?
     var itemText: NSString?
@@ -28,12 +29,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             "firstLaunch" : true,
             "sound" : true,
             "badge" : true,
-            "showAd": true,
+            "upgrade": false,
             "fontSize": 18
         ]
         userDefaults.registerDefaults(defaultsValues as! [String : AnyObject])
         
         FIRApp.configure()
+        
+        // デリゲート設定
+        XXXPurchaseManager.sharedManager().delegate = self
+        
+        // オブザーバー登録
+        SKPaymentQueue.defaultQueue().addTransactionObserver(XXXPurchaseManager.sharedManager())
         
         return true
     }
@@ -50,6 +57,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillEnterForeground(application: UIApplication) {
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+        
     }
 
     func applicationDidBecomeActive(application: UIApplication) {
@@ -59,6 +67,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
+        // オブザーバー登録解除
+        SKPaymentQueue.defaultQueue().removeTransactionObserver(XXXPurchaseManager.sharedManager());
+        
         self.saveContext()
     }
 

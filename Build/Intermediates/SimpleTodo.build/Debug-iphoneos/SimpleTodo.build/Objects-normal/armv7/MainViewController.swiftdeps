@@ -14,120 +14,120 @@ provides-member:
 - ["CSo6UIView", "fadeOut"]
 - ["CSo6UIView", "fadeOut"]
 provides-dynamic-lookup:
-- "tableView"
-- "tableView"
-- "tableView"
-- "tableView"
-- "tableView"
-- "tableView"
-- "tableView"
-- "tableView"
-- "gadController"
-- "fadeIn"
-- "pushAddButton"
-- "viewWillAppear"
-- "setEditing"
-- "showPopMessageView"
-- "userDefaults"
-- "fetchedResultsController"
 - "setCheckedValue"
-- "setBadgeValue"
-- "didReceiveMemoryWarning"
-- "pushTrashButton"
-- "settingButton"
-- "controllerDidChangeContent"
-- "viewDidLoad"
+- "tableView"
+- "tableView"
+- "tableView"
+- "tableView"
+- "tableView"
+- "tableView"
+- "tableView"
+- "tableView"
+- "pushAddButton"
+- "gadController"
+- "fetchedResultsController"
+- "showPopMessageView"
+- "setEditing"
+- "userDefaults"
 - "popMessageView"
-- "appDelegate"
+- "viewWillAppear"
+- "pushTrashButton"
 - "numberOfSectionsInTableView"
 - "btmToolBarConstraint"
-- "bannerView"
+- "didReceiveMemoryWarning"
+- "appDelegate"
+- "viewDidLoad"
 - "btmToolBar"
+- "fadeIn"
+- "controllerDidChangeContent"
+- "setBadgeValue"
+- "settingButton"
 - "fadeOut"
 - "viewDidAppear"
+- "bannerView"
 - "cellLongPressed"
 depends-top-level:
-- !private "UIFont"
-- "NSUserDefaults"
 - !private "UITableViewCellSelectionStyle"
-- !private "<"
-- "CGFloat"
-- !private "AddViewController"
-- "NSIndexPath"
+- !private "UITableViewAutomaticDimension"
 - !private "dispatch_async"
-- "UIApplication"
+- "UINavigationControllerDelegate"
 - !private "dispatch_get_main_queue"
-- !private "/"
-- "NSInteger"
-- !private "NSMutableAttributedString"
-- "FadeType"
+- "GADBannerViewDelegate"
+- !private "UIStoryboard"
+- !private "UIFont"
+- "CGFloat"
 - !private "dispatch_after"
-- !private "AudioServicesPlaySystemSound"
-- "UITableView"
-- "UIView"
+- !private "UIColor"
+- "UILongPressGestureRecognizer"
+- !private "print"
+- !private "Item"
+- !private "!="
+- "NSUserDefaults"
+- !private "<"
+- "UIToolbar"
+- !private "NSMutableAttributedString"
+- !private "/"
+- !private "NSArray"
+- "UIViewController"
+- "NSTimeInterval"
+- !private "Int64"
+- !private "String"
+- "UITableViewCell"
+- !private "DISPATCH_TIME_NOW"
+- "NSLayoutConstraint"
+- !private "UILabel"
+- "UITableViewDelegate"
 - "UITableViewDataSource"
 - "AppDelegate"
-- "UITableViewDelegate"
-- "NSFetchedResultsController"
-- !private "NSManagedObject"
-- "Bool"
-- !private "Item"
-- !private "+"
-- "StringLiteralType"
-- "Array"
-- !private "print"
-- "GADBannerViewDelegate"
-- "Int"
-- !private "NSPredicate"
-- "UINavigationControllerDelegate"
-- "NSTimeInterval"
-- !private "UIUserNotificationSettings"
-- !private "-"
-- "UIGestureRecognizerDelegate"
-- !private "UIGestureRecognizerState"
-- !private "UIStoryboard"
-- !private "..<"
-- "UITableViewCell"
-- "NSFetchedResultsControllerDelegate"
-- !private "Int64"
-- !private "NSSortDescriptor"
-- !private "DISPATCH_TIME_NOW"
-- "UIBarButtonItem"
-- !private "NSMakeRange"
-- !private "NSError"
-- !private "!="
-- "UILongPressGestureRecognizer"
-- !private "dispatch_time"
-- !private "UIBarButtonSystemItem"
-- !private "NSArray"
-- !private "NSEC_PER_SEC"
-- !private "UIUserNotificationType"
-- !private "CGPointMake"
-- "BooleanLiteralType"
-- !private "UILabel"
-- !private "NSStrikethroughStyleAttributeName"
-- !private "NSEntityDescription"
-- "MainViewController"
-- !private "NSForegroundColorAttributeName"
-- !private "String"
-- !private "Dictionary"
-- !private "UIColor"
-- "GADBannerView"
-- "NSNumber"
-- !private "Double"
-- "NSLayoutConstraint"
-- "=="
-- !private "*"
-- "GadController"
-- !private "UITableViewScrollPosition"
-- "UIViewController"
-- !private "~="
-- "UIToolbar"
-- "UITableViewRowAction"
-- !private "EditViewController"
 - !private "NSFetchRequest"
-- !private "UITableViewAutomaticDimension"
+- "NSFetchedResultsControllerDelegate"
+- "NSIndexPath"
+- "UIBarButtonItem"
+- !private "+"
+- "UIGestureRecognizerDelegate"
+- "FadeType"
+- "NSFetchedResultsController"
+- !private "NSForegroundColorAttributeName"
+- !private "UIGestureRecognizerState"
+- !private "NSError"
+- !private "NSSortDescriptor"
+- "UITableView"
+- "Int"
+- !private "-"
+- !private "..<"
+- "StringLiteralType"
+- !private "NSEntityDescription"
+- "Array"
+- !private "NSStrikethroughStyleAttributeName"
+- !private "AddViewController"
+- "Bool"
+- !private "UIUserNotificationSettings"
+- !private "dispatch_time"
+- !private "UIUserNotificationType"
+- "NSInteger"
+- !private "NSEC_PER_SEC"
+- !private "Dictionary"
+- !private "NSManagedObject"
+- !private "NSMakeRange"
+- "MainViewController"
+- !private "AudioServicesPlaySystemSound"
+- !private "NSPredicate"
+- "BooleanLiteralType"
+- "UIApplication"
+- "NSNumber"
+- !private "CGPointMake"
+- "UITableViewRowAction"
+- "GadController"
+- "=="
 - !private "UIPasteboard"
+- !private "~="
+- !private "Double"
+- !private "UIBarButtonSystemItem"
+- "GADBannerView"
+- !private "*"
+- !private "EditViewController"
+- !private "UITableViewScrollPosition"
+- "UIView"
 depends-member:
 - !private ["Ps16AbsoluteValuable", "Normal"]
 - !private ["Ps16AbsoluteValuable", "init"]
@@ -299,6 +299,7 @@ depends-member:
 - !private ["Ps9AnyObject", "text"]
 - !private ["Ps9AnyObject", "tintColor"]
 - !private ["Ps9AnyObject", "titleTextAttributes"]
+- !private ["Ps9AnyObject", "translucent"]
 - ["Ps9AnyObject", "userDefaults"]
 - !private ["Ps9AnyObject", "view"]
 - ["Ps9AnyObject", "viewDidAppear"]
@@ -527,6 +528,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "text"]
 - !private ["Ps11CVarArgType", "tintColor"]
 - !private ["Ps11CVarArgType", "titleTextAttributes"]
+- !private ["Ps11CVarArgType", "translucent"]
 - ["Ps11CVarArgType", "userDefaults"]
 - !private ["Ps11CVarArgType", "view"]
 - ["Ps11CVarArgType", "viewDidAppear"]
@@ -728,6 +730,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "text"]
 - !private ["Ps28CustomDebugStringConvertible", "tintColor"]
 - !private ["Ps28CustomDebugStringConvertible", "titleTextAttributes"]
+- !private ["Ps28CustomDebugStringConvertible", "translucent"]
 - ["Ps28CustomDebugStringConvertible", "userDefaults"]
 - !private ["Ps28CustomDebugStringConvertible", "view"]
 - ["Ps28CustomDebugStringConvertible", "viewDidAppear"]
@@ -918,6 +921,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "text"]
 - !private ["Ps23CustomStringConvertible", "tintColor"]
 - !private ["Ps23CustomStringConvertible", "titleTextAttributes"]
+- !private ["Ps23CustomStringConvertible", "translucent"]
 - ["Ps23CustomStringConvertible", "userDefaults"]
 - !private ["Ps23CustomStringConvertible", "view"]
 - ["Ps23CustomStringConvertible", "viewDidAppear"]
@@ -1123,6 +1127,7 @@ depends-member:
 - !private ["Ps9Equatable", "text"]
 - !private ["Ps9Equatable", "tintColor"]
 - !private ["Ps9Equatable", "titleTextAttributes"]
+- !private ["Ps9Equatable", "translucent"]
 - ["Ps9Equatable", "userDefaults"]
 - !private ["Ps9Equatable", "view"]
 - ["Ps9Equatable", "viewDidAppear"]
@@ -1528,6 +1533,7 @@ depends-member:
 - !private ["Ps8Hashable", "text"]
 - !private ["Ps8Hashable", "tintColor"]
 - !private ["Ps8Hashable", "titleTextAttributes"]
+- !private ["Ps8Hashable", "translucent"]
 - ["Ps8Hashable", "userDefaults"]
 - !private ["Ps8Hashable", "view"]
 - ["Ps8Hashable", "viewDidAppear"]
@@ -1870,6 +1876,7 @@ depends-member:
 - !private ["PSo8NSCoding", "text"]
 - !private ["PSo8NSCoding", "tintColor"]
 - !private ["PSo8NSCoding", "titleTextAttributes"]
+- !private ["PSo8NSCoding", "translucent"]
 - ["PSo8NSCoding", "userDefaults"]
 - !private ["PSo8NSCoding", "view"]
 - ["PSo8NSCoding", "viewDidAppear"]
@@ -2309,6 +2316,7 @@ depends-member:
 - !private ["CSo8NSObject", "text"]
 - !private ["CSo8NSObject", "tintColor"]
 - !private ["CSo8NSObject", "titleTextAttributes"]
+- !private ["CSo8NSObject", "translucent"]
 - ["CSo8NSObject", "userDefaults"]
 - !private ["CSo8NSObject", "view"]
 - ["CSo8NSObject", "viewDidAppear"]
@@ -2483,6 +2491,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "text"]
 - !private ["PSo16NSObjectProtocol", "tintColor"]
 - !private ["PSo16NSObjectProtocol", "titleTextAttributes"]
+- !private ["PSo16NSObjectProtocol", "translucent"]
 - ["PSo16NSObjectProtocol", "userDefaults"]
 - !private ["PSo16NSObjectProtocol", "view"]
 - ["PSo16NSObjectProtocol", "viewDidAppear"]
@@ -2624,6 +2633,7 @@ depends-member:
 - !private ["PSo29UIAccessibilityIdentification", "text"]
 - !private ["PSo29UIAccessibilityIdentification", "tintColor"]
 - !private ["PSo29UIAccessibilityIdentification", "titleTextAttributes"]
+- !private ["PSo29UIAccessibilityIdentification", "translucent"]
 - !private ["PSo29UIAccessibilityIdentification", "viewWithTag"]
 - !private ["PSo12UIAppearance", "FadeType"]
 - !private ["PSo12UIAppearance", "UIView"]
@@ -2661,6 +2671,7 @@ depends-member:
 - !private ["PSo12UIAppearance", "text"]
 - !private ["PSo12UIAppearance", "tintColor"]
 - !private ["PSo12UIAppearance", "titleTextAttributes"]
+- !private ["PSo12UIAppearance", "translucent"]
 - !private ["PSo12UIAppearance", "viewWithTag"]
 - !private ["PSo21UIAppearanceContainer", "AudioServicesPlaySystemSound"]
 - !private ["PSo21UIAppearanceContainer", "CGFloat"]
@@ -2789,6 +2800,7 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "text"]
 - !private ["PSo21UIAppearanceContainer", "tintColor"]
 - !private ["PSo21UIAppearanceContainer", "titleTextAttributes"]
+- !private ["PSo21UIAppearanceContainer", "translucent"]
 - ["PSo21UIAppearanceContainer", "userDefaults"]
 - !private ["PSo21UIAppearanceContainer", "view"]
 - ["PSo21UIAppearanceContainer", "viewDidAppear"]
@@ -2814,6 +2826,7 @@ depends-member:
 - !private ["PSo16UIBarPositioning", "items"]
 - !private ["PSo16UIBarPositioning", "tintColor"]
 - !private ["PSo16UIBarPositioning", "titleTextAttributes"]
+- !private ["PSo16UIBarPositioning", "translucent"]
 - !private ["CSo7UIColor", "blackColor"]
 - !private ["CSo7UIColor", "grayColor"]
 - !private ["CSo7UIColor", "init"]
@@ -2956,6 +2969,7 @@ depends-member:
 - !private ["PSo17UICoordinateSpace", "text"]
 - !private ["PSo17UICoordinateSpace", "tintColor"]
 - !private ["PSo17UICoordinateSpace", "titleTextAttributes"]
+- !private ["PSo17UICoordinateSpace", "translucent"]
 - !private ["PSo17UICoordinateSpace", "viewWithTag"]
 - !private ["PSo13UIDynamicItem", "FadeType"]
 - !private ["PSo13UIDynamicItem", "UIView"]
@@ -2993,6 +3007,7 @@ depends-member:
 - !private ["PSo13UIDynamicItem", "text"]
 - !private ["PSo13UIDynamicItem", "tintColor"]
 - !private ["PSo13UIDynamicItem", "titleTextAttributes"]
+- !private ["PSo13UIDynamicItem", "translucent"]
 - !private ["PSo13UIDynamicItem", "viewWithTag"]
 - !private ["PSo18UIFocusEnvironment", "AudioServicesPlaySystemSound"]
 - !private ["PSo18UIFocusEnvironment", "CGFloat"]
@@ -3121,6 +3136,7 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "text"]
 - !private ["PSo18UIFocusEnvironment", "tintColor"]
 - !private ["PSo18UIFocusEnvironment", "titleTextAttributes"]
+- !private ["PSo18UIFocusEnvironment", "translucent"]
 - ["PSo18UIFocusEnvironment", "userDefaults"]
 - !private ["PSo18UIFocusEnvironment", "view"]
 - ["PSo18UIFocusEnvironment", "viewDidAppear"]
@@ -3243,6 +3259,7 @@ depends-member:
 - !private ["CSo15UINavigationBar", "barTintColor"]
 - !private ["CSo15UINavigationBar", "tintColor"]
 - !private ["CSo15UINavigationBar", "titleTextAttributes"]
+- !private ["CSo15UINavigationBar", "translucent"]
 - !private ["CSo22UINavigationController", "navigationBar"]
 - !private ["PSo30UINavigationControllerDelegate", "AudioServicesPlaySystemSound"]
 - !private ["PSo30UINavigationControllerDelegate", "CGFloat"]
@@ -3493,6 +3510,7 @@ depends-member:
 - !private ["CSo11UIResponder", "text"]
 - !private ["CSo11UIResponder", "tintColor"]
 - !private ["CSo11UIResponder", "titleTextAttributes"]
+- !private ["CSo11UIResponder", "translucent"]
 - ["CSo11UIResponder", "userDefaults"]
 - !private ["CSo11UIResponder", "view"]
 - ["CSo11UIResponder", "viewDidAppear"]
@@ -3915,6 +3933,7 @@ depends-member:
 - !private ["CSo9UIToolbar", "barTintColor"]
 - !private ["CSo9UIToolbar", "items"]
 - !private ["CSo9UIToolbar", "tintColor"]
+- !private ["CSo9UIToolbar", "translucent"]
 - !private ["PSo18UITraitEnvironment", "AudioServicesPlaySystemSound"]
 - !private ["PSo18UITraitEnvironment", "CGFloat"]
 - !private ["PSo18UITraitEnvironment", "CGPointMake"]
@@ -4042,6 +4061,7 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "text"]
 - !private ["PSo18UITraitEnvironment", "tintColor"]
 - !private ["PSo18UITraitEnvironment", "titleTextAttributes"]
+- !private ["PSo18UITraitEnvironment", "translucent"]
 - ["PSo18UITraitEnvironment", "userDefaults"]
 - !private ["PSo18UITraitEnvironment", "view"]
 - ["PSo18UITraitEnvironment", "viewDidAppear"]
@@ -4089,6 +4109,7 @@ depends-member:
 - !private ["CSo6UIView", "text"]
 - !private ["CSo6UIView", "tintColor"]
 - !private ["CSo6UIView", "titleTextAttributes"]
+- !private ["CSo6UIView", "translucent"]
 - !private ["CSo6UIView", "viewWithTag"]
 - !private ["VSC18UIViewAutoresizing", "Element"]
 - !private ["VSC18UIViewAutoresizing", "FlexibleHeight"]
@@ -4346,6 +4367,7 @@ depends-member:
 - !private ["Ps12_Reflectable", "text"]
 - !private ["Ps12_Reflectable", "tintColor"]
 - !private ["Ps12_Reflectable", "titleTextAttributes"]
+- !private ["Ps12_Reflectable", "translucent"]
 - !private ["Ps12_Reflectable", "viewWithTag"]
 - !private ["Ps12_Reflectable", "width"]
 - !private ["Ps18_SignedIntegerType", "Distance"]

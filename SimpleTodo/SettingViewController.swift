@@ -59,7 +59,7 @@ class SettingViewController: UITableViewController {
             badgeSwitch.on = false
         }
         
-        if userDefaults.boolForKey("showAd") {
+        if userDefaults.boolForKey("upgrade") {
             adSwitch.on = true
         } else {
             adSwitch.on = false
@@ -76,10 +76,10 @@ class SettingViewController: UITableViewController {
     
     @IBAction func adChange(sender: UISwitch) {
         if sender.on {
-            userDefaults.setBool(true, forKey: "showAd")
+            userDefaults.setBool(true, forKey: "upgrade")
 
         } else {
-            userDefaults.setBool(false, forKey: "showAd")
+            userDefaults.setBool(false, forKey: "upgrade")
 
         }
     }

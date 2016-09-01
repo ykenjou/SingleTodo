@@ -6,22 +6,22 @@ provides-nominal:
 provides-member:
 - ["C10SimpleTodo22PurchaseViewController", ""]
 provides-dynamic-lookup:
-- "purchaseButton"
 - "didReceiveMemoryWarning"
+- "purchaseButton"
 - "viewDidLoad"
 - "textView"
 depends-top-level:
 - "UIButton"
-- !private "XXXProductManager"
-- !private "NSError"
+- !private "UIColor"
 - !private "Array"
 - !private "Void"
+- "PurchaseViewController"
 - !private "SKProduct"
 - "UIViewController"
-- !private "UIColor"
-- "PurchaseViewController"
-- "UITextView"
+- !private "XXXProductManager"
 - !private "StringLiteralType"
+- !private "NSError"
+- "UITextView"
 depends-member:
 - !private ["Ps9AnyObject", "CGColor"]
 - !private ["Ps9AnyObject", "UIColor"]
