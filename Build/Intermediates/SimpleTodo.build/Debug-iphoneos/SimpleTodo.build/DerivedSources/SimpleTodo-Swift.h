@@ -280,13 +280,19 @@ SWIFT_CLASS("_TtC10SimpleTodo18MainViewController")
 
 @class UIActivityIndicatorView;
 @class UIButton;
+@class UILabel;
 
 SWIFT_CLASS("_TtC10SimpleTodo22PurchaseViewController")
 @interface PurchaseViewController : UIViewController <XXXPurchaseManagerDelegate>
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified purchaseButton;
-@property (nonatomic, strong) UIActivityIndicatorView * _Null_unspecified activityView;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified restoreButton;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified statusLabel;
+@property (nonatomic, strong) UIActivityIndicatorView * _Null_unspecified buttonActivityView;
+@property (nonatomic, strong) UIActivityIndicatorView * _Null_unspecified purchaseActivityView;
+@property (nonatomic, readonly, strong) NSUserDefaults * _Nonnull userDefaults;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
+- (void)buttonStatusChange;
 - (IBAction)pushPurchaseButton:(UIButton * _Nonnull)sender;
 - (IBAction)pushRestoreButton:(UIButton * _Nonnull)sender;
 - (void)startPurchase:(NSString * _Nonnull)productIdentifier;
@@ -303,7 +309,6 @@ SWIFT_CLASS("_TtC10SimpleTodo22PurchaseViewController")
 @end
 
 @class UIStoryboard;
-@class UILabel;
 
 SWIFT_CLASS("_TtC10SimpleTodo21SettingViewController")
 @interface SettingViewController : UITableViewController

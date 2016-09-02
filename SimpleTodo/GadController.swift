@@ -22,7 +22,11 @@ class GadController: GADBannerView ,GADBannerViewDelegate {
         bannerView.rootViewController = viewController
         let gadRequest = GADRequest()
         //テスト用　申請時にコメントアウト
-        gadRequest.testDevices = ["76ecad5fc0db8001fad445437590b7a9"]
+        //iPhone6
+        //gadRequest.testDevices = ["76ecad5fc0db8001fad445437590b7a9"]
+        //iPhone5
+        gadRequest.testDevices = ["0555d8f5513997e29b439610a07d9741"]
+        
         bannerView.loadRequest(gadRequest)
         
         return bannerView

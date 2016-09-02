@@ -1,0 +1,194 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "ColorViewController"
+provides-nominal:
+- "C10SimpleTodo19ColorViewController"
+provides-member:
+- ["C10SimpleTodo19ColorViewController", ""]
+provides-dynamic-lookup:
+- "viewDidLoad"
+- "didReceiveMemoryWarning"
+depends-top-level:
+- "ColorViewController"
+- "UIViewController"
+depends-member:
+- ["Ps9AnyObject", "didReceiveMemoryWarning"]
+- ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "viewDidLoad"]
+- ["Ps9AnyObject", ""]
+- ["Ps11CVarArgType", "didReceiveMemoryWarning"]
+- ["Ps11CVarArgType", "init"]
+- ["Ps11CVarArgType", "viewDidLoad"]
+- ["Ps11CVarArgType", ""]
+- ["C10SimpleTodo19ColorViewController", "deinit"]
+- ["C10SimpleTodo19ColorViewController", "didReceiveMemoryWarning"]
+- ["C10SimpleTodo19ColorViewController", "init"]
+- ["C10SimpleTodo19ColorViewController", "viewDidLoad"]
+- ["Ps28CustomDebugStringConvertible", "didReceiveMemoryWarning"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- ["Ps23CustomStringConvertible", "didReceiveMemoryWarning"]
+- ["Ps23CustomStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", "viewDidLoad"]
+- ["Ps23CustomStringConvertible", ""]
+- ["Ps9Equatable", "didReceiveMemoryWarning"]
+- ["Ps9Equatable", "init"]
+- ["Ps9Equatable", "viewDidLoad"]
+- ["Ps9Equatable", ""]
+- ["Ps8Hashable", "didReceiveMemoryWarning"]
+- ["Ps8Hashable", "init"]
+- ["Ps8Hashable", "viewDidLoad"]
+- ["Ps8Hashable", ""]
+- ["PSo8NSCoding", "didReceiveMemoryWarning"]
+- ["PSo8NSCoding", "init"]
+- ["PSo8NSCoding", "viewDidLoad"]
+- ["PSo8NSCoding", ""]
+- ["PSo26NSExtensionRequestHandling", "didReceiveMemoryWarning"]
+- ["PSo26NSExtensionRequestHandling", "init"]
+- ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
+- ["PSo26NSExtensionRequestHandling", ""]
+- ["CSo8NSObject", "didReceiveMemoryWarning"]
+- ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "viewDidLoad"]
+- ["PSo16NSObjectProtocol", "didReceiveMemoryWarning"]
+- ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", "viewDidLoad"]
+- ["PSo16NSObjectProtocol", ""]
+- ["PSo21UIAppearanceContainer", "didReceiveMemoryWarning"]
+- ["PSo21UIAppearanceContainer", "init"]
+- ["PSo21UIAppearanceContainer", "viewDidLoad"]
+- ["PSo21UIAppearanceContainer", ""]
+- ["PSo18UIContentContainer", "didReceiveMemoryWarning"]
+- ["PSo18UIContentContainer", "init"]
+- ["PSo18UIContentContainer", "viewDidLoad"]
+- ["PSo18UIContentContainer", ""]
+- ["PSo18UIFocusEnvironment", "didReceiveMemoryWarning"]
+- ["PSo18UIFocusEnvironment", "init"]
+- ["PSo18UIFocusEnvironment", "viewDidLoad"]
+- ["PSo18UIFocusEnvironment", ""]
+- ["CSo11UIResponder", "didReceiveMemoryWarning"]
+- ["CSo11UIResponder", "init"]
+- ["CSo11UIResponder", "viewDidLoad"]
+- ["PSo16UIStateRestoring", "didReceiveMemoryWarning"]
+- ["PSo16UIStateRestoring", "init"]
+- ["PSo16UIStateRestoring", "viewDidLoad"]
+- ["PSo16UIStateRestoring", ""]
+- ["PSo18UITraitEnvironment", "didReceiveMemoryWarning"]
+- ["PSo18UITraitEnvironment", "init"]
+- ["PSo18UITraitEnvironment", "viewDidLoad"]
+- ["PSo18UITraitEnvironment", ""]
+- ["CSo16UIViewController", "didReceiveMemoryWarning"]
+- ["CSo16UIViewController", "init"]
+- ["CSo16UIViewController", "viewDidLoad"]
+- ["CSo16UIViewController", ""]
+depends-nominal:
+- "Ps9AnyObject"
+- "Ps11CVarArgType"
+- "C10SimpleTodo19ColorViewController"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- "Ps9Equatable"
+- "Ps8Hashable"
+- "PSo8NSCoding"
+- "PSo26NSExtensionRequestHandling"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- "PSo21UIAppearanceContainer"
+- "PSo18UIContentContainer"
+- "PSo18UIFocusEnvironment"
+- "CSo11UIResponder"
+- "PSo16UIStateRestoring"
+- "PSo18UITraitEnvironment"
+- "CSo16UIViewController"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Foundation.swiftmodule"
+- "/Users/kenjou/Documents/SimpleToDo/SimpleTodo/Pods/Firebase/Analytics/Sources/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreData.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreAudio.swiftmodule"
+- "./GoogleMobileAds.framework/Headers/GADRewardBasedVideoAdDelegate.h"
+- "./GoogleMobileAds.framework/Headers/GADRewardBasedVideoAd.h"
+- "./GoogleMobileAds.framework/Headers/GADAdReward.h"
+- "./GoogleMobileAds.framework/Headers/GADSearchRequest.h"
+- "./GoogleMobileAds.framework/Headers/GADSearchBannerView.h"
+- "./GoogleMobileAds.framework/Headers/GADDynamicHeightSearchRequest.h"
+- "./GoogleMobileAds.framework/Headers/GADMediatedNativeContentAd.h"
+- "./GoogleMobileAds.framework/Headers/GADMediatedNativeAppInstallAd.h"
+- "./GoogleMobileAds.framework/Headers/GADMediatedNativeAdNotificationSource.h"
+- "./GoogleMobileAds.framework/Headers/GADCustomEventParameters.h"
+- "./GoogleMobileAds.framework/Headers/GADMediatedNativeAdDelegate.h"
+- "./GoogleMobileAds.framework/Headers/GADMediatedNativeAd.h"
+- "./GoogleMobileAds.framework/Headers/GADCustomEventNativeAdDelegate.h"
+- "./GoogleMobileAds.framework/Headers/GADCustomEventNativeAd.h"
+- "./GoogleMobileAds.framework/Headers/GADCustomEventInterstitialDelegate.h"
+- "./GoogleMobileAds.framework/Headers/GADCustomEventInterstitial.h"
+- "./GoogleMobileAds.framework/Headers/GADCustomEventExtras.h"
+- "./GoogleMobileAds.framework/Headers/GADCustomEventRequest.h"
+- "./GoogleMobileAds.framework/Headers/GADCustomEventBannerDelegate.h"
+- "./GoogleMobileAds.framework/Headers/GADCustomEventBanner.h"
+- "./GoogleMobileAds.framework/Headers/GADNativeAdImageAdLoaderOptions.h"
+- "./GoogleMobileAds.framework/Headers/GADNativeCustomTemplateAd.h"
+- "./GoogleMobileAds.framework/Headers/GADNativeContentAd.h"
+- "./GoogleMobileAds.framework/Headers/GADNativeAppInstallAd.h"
+- "./GoogleMobileAds.framework/Headers/GADNativeAdImage+Mediation.h"
+- "./GoogleMobileAds.framework/Headers/GADNativeAdImage.h"
+- "./GoogleMobileAds.framework/Headers/GADNativeAdDelegate.h"
+- "./GoogleMobileAds.framework/Headers/GADNativeAd.h"
+- "./GoogleMobileAds.framework/Headers/GADAdLoaderAdTypes.h"
+- "./GoogleMobileAds.framework/Headers/DFPRequest.h"
+- "./GoogleMobileAds.framework/Headers/DFPInterstitial.h"
+- "./GoogleMobileAds.framework/Headers/DFPCustomRenderedInterstitialDelegate.h"
+- "./GoogleMobileAds.framework/Headers/DFPCustomRenderedAd.h"
+- "./GoogleMobileAds.framework/Headers/GADAppEventDelegate.h"
+- "./GoogleMobileAds.framework/Headers/DFPCustomRenderedBannerViewDelegate.h"
+- "./GoogleMobileAds.framework/Headers/DFPBannerView.h"
+- "./GoogleMobileAds.framework/Headers/GADVideoOptions.h"
+- "./GoogleMobileAds.framework/Headers/GADVideoControllerDelegate.h"
+- "./GoogleMobileAds.framework/Headers/GADVideoController.h"
+- "./GoogleMobileAds.framework/Headers/GADNativeExpressAdViewDelegate.h"
+- "./GoogleMobileAds.framework/Headers/GADNativeExpressAdView.h"
+- "./GoogleMobileAds.framework/Headers/GADMobileAds.h"
+- "./GoogleMobileAds.framework/Headers/GADMediaView.h"
+- "./GoogleMobileAds.framework/Headers/GADInterstitialDelegate.h"
+- "./GoogleMobileAds.framework/Headers/GADInterstitial.h"
+- "./GoogleMobileAds.framework/Headers/GADInAppPurchase.h"
+- "./GoogleMobileAds.framework/Headers/GADExtras.h"
+- "./GoogleMobileAds.framework/Headers/GADAdLoaderDelegate.h"
+- "./GoogleMobileAds.framework/Headers/GADAdLoader.h"
+- "./GoogleMobileAds.framework/Headers/GADCorrelatorAdLoaderOptions.h"
+- "./GoogleMobileAds.framework/Headers/GADCorrelator.h"
+- "./GoogleMobileAds.framework/Headers/GADRequestError.h"
+- "./GoogleMobileAds.framework/Headers/GADRequest.h"
+- "./GoogleMobileAds.framework/Headers/GADInAppPurchaseDelegate.h"
+- "./GoogleMobileAds.framework/Headers/GADBannerViewDelegate.h"
+- "./GoogleMobileAds.framework/Headers/GADAdSizeDelegate.h"
+- "./GoogleMobileAds.framework/Headers/GADBannerView.h"
+- "./GoogleMobileAds.framework/Headers/GADAdSize.h"
+- "./GoogleMobileAds.framework/Headers/GADAdNetworkExtras.h"
+- "./GoogleMobileAds.framework/Headers/GADAdDelegate.h"
+- "./GoogleMobileAds.framework/Headers/GoogleMobileAdsDefines.h"
+- "./GoogleMobileAds.framework/Headers/GoogleMobileAds.h"
+- "./GoogleMobileAds.framework/Modules/module.modulemap"
+- "/Users/kenjou/Documents/SimpleToDo/SimpleTodo/GoogleMobileAds.framework/Modules/module.modulemap"
+- "/Users/kenjou/Documents/SimpleToDo/SimpleTodo/Pods/Headers/Public/FirebaseInstanceID/FirebaseInstanceID/FIRInstanceID.h"
+- "/Users/kenjou/Documents/SimpleToDo/SimpleTodo/Pods/Headers/Public/FirebaseInstanceID/FirebaseInstanceID/FirebaseInstanceID.h"
+- "/Users/kenjou/Documents/SimpleToDo/SimpleTodo/Pods/Headers/Public/FirebaseAnalytics/FirebaseAnalytics/FIROptions.h"
+- "/Users/kenjou/Documents/SimpleToDo/SimpleTodo/Pods/Headers/Public/FirebaseAnalytics/FirebaseAnalytics/FIRConfiguration.h"
+- "/Users/kenjou/Documents/SimpleToDo/SimpleTodo/Pods/Headers/Public/FirebaseAnalytics/FirebaseAnalytics/FIRApp.h"
+- "/Users/kenjou/Documents/SimpleToDo/SimpleTodo/Pods/Headers/Public/FirebaseAnalytics/FirebaseAnalytics/FIRAnalyticsConfiguration.h"
+- "/Users/kenjou/Documents/SimpleToDo/SimpleTodo/Pods/Headers/Public/FirebaseAnalytics/FirebaseAnalytics/FIRUserPropertyNames.h"
+- "/Users/kenjou/Documents/SimpleToDo/SimpleTodo/Pods/Headers/Public/FirebaseAnalytics/FirebaseAnalytics/FIRParameterNames.h"
+- "/Users/kenjou/Documents/SimpleToDo/SimpleTodo/Pods/Headers/Public/FirebaseAnalytics/FirebaseAnalytics/FIREventNames.h"
+- "/Users/kenjou/Documents/SimpleToDo/SimpleTodo/Pods/Headers/Public/FirebaseAnalytics/FirebaseAnalytics/FIRAnalytics.h"
+- "/Users/kenjou/Documents/SimpleToDo/SimpleTodo/Pods/Headers/Public/FirebaseAnalytics/FirebaseAnalytics/FIRAnalytics+AppDelegate.h"
+- "/Users/kenjou/Documents/SimpleToDo/SimpleTodo/Pods/Headers/Public/FirebaseAnalytics/FirebaseAnalytics/FirebaseAnalytics.h"
+- "/Users/kenjou/Documents/SimpleToDo/SimpleTodo/Pods/Firebase/Analytics/Sources/Firebase.h"
+interface-hash: "776c386997cc598d5642324663257810"

@@ -72,40 +72,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upgrade of Application" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QNq-qO-dcz">
-                                <rect key="frame" x="30" y="114" width="540" height="29"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Upgrade of Application" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QNq-qO-dcz">
+                                <rect key="frame" x="30" y="84" width="540" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="・Hide advertisement" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fmf-Uy-o2q">
-                                <rect key="frame" x="30" y="173" width="540" height="22"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="・Hide advertisement" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fmf-Uy-o2q">
+                                <rect key="frame" x="20" y="133" width="560" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="・The view area on the list is expanded" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5EE-fX-Kv3">
-                                <rect key="frame" x="30" y="215" width="540" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <rect key="frame" x="20" y="170" width="560" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NEt-cu-Ul9">
-                                <rect key="frame" x="225" y="538" width="151" height="32"/>
+                                <rect key="frame" x="225" y="543" width="151" height="32"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" title="restore the purchase"/>
                                 <connections>
                                     <action selector="pushRestoreButton:" destination="sqF-pS-8Jh" eventType="touchUpInside" id="KA4-TP-17f"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When you bought it, You can be restored to the original state from this" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jjh-Tm-nZh">
-                                <rect key="frame" x="30" y="497" width="540" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="When you bought it, you can be restored to the original state from this" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jjh-Tm-nZh">
+                                <rect key="frame" x="20" y="502" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j7o-ln-1SV">
-                                <rect key="frame" x="240" y="276" width="120" height="44"/>
+                                <rect key="frame" x="240" y="212" width="120" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="WwQ-hP-pJ3"/>
                                     <constraint firstAttribute="height" constant="44" id="Y4L-Q5-AAH"/>
@@ -116,30 +116,41 @@
                                     <action selector="pushPurchaseButton:" destination="sqF-pS-8Jh" eventType="touchUpInside" id="NR4-DL-Whd"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="status" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gw9-9m-xRV">
+                                <rect key="frame" x="40" y="276" width="520" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="jjh-Tm-nZh" firstAttribute="leading" secondItem="uXs-gl-fkj" secondAttribute="leading" constant="30" id="26P-WZ-onw"/>
+                            <constraint firstItem="jjh-Tm-nZh" firstAttribute="leading" secondItem="uXs-gl-fkj" secondAttribute="leading" constant="20" id="26P-WZ-onw"/>
                             <constraint firstAttribute="trailing" secondItem="QNq-qO-dcz" secondAttribute="trailing" constant="30" id="5dj-R5-brD"/>
-                            <constraint firstAttribute="trailing" secondItem="5EE-fX-Kv3" secondAttribute="trailing" constant="30" id="6YW-30-zmV"/>
-                            <constraint firstItem="j7o-ln-1SV" firstAttribute="top" secondItem="5EE-fX-Kv3" secondAttribute="bottom" constant="40" id="81E-ZZ-n1r"/>
-                            <constraint firstItem="QNq-qO-dcz" firstAttribute="top" secondItem="3il-CV-qr6" secondAttribute="bottom" constant="50" id="9Ie-p4-0Gs"/>
-                            <constraint firstAttribute="trailing" secondItem="jjh-Tm-nZh" secondAttribute="trailing" constant="30" id="CPR-YV-rBT"/>
-                            <constraint firstItem="fmf-Uy-o2q" firstAttribute="top" secondItem="QNq-qO-dcz" secondAttribute="bottom" constant="30" id="H6Q-3F-DNw"/>
+                            <constraint firstAttribute="trailing" secondItem="5EE-fX-Kv3" secondAttribute="trailing" constant="20" id="6YW-30-zmV"/>
+                            <constraint firstItem="j7o-ln-1SV" firstAttribute="top" secondItem="5EE-fX-Kv3" secondAttribute="bottom" constant="20" id="81E-ZZ-n1r"/>
+                            <constraint firstItem="QNq-qO-dcz" firstAttribute="top" secondItem="3il-CV-qr6" secondAttribute="bottom" constant="20" id="9Ie-p4-0Gs"/>
+                            <constraint firstItem="Gw9-9m-xRV" firstAttribute="top" secondItem="j7o-ln-1SV" secondAttribute="bottom" constant="20" id="ALw-pz-TbU"/>
+                            <constraint firstAttribute="trailing" secondItem="jjh-Tm-nZh" secondAttribute="trailing" constant="20" id="CPR-YV-rBT"/>
+                            <constraint firstItem="fmf-Uy-o2q" firstAttribute="top" secondItem="QNq-qO-dcz" secondAttribute="bottom" constant="20" id="H6Q-3F-DNw"/>
                             <constraint firstItem="j7o-ln-1SV" firstAttribute="centerX" secondItem="uXs-gl-fkj" secondAttribute="centerX" id="HN5-MN-Y7e"/>
                             <constraint firstItem="NEt-cu-Ul9" firstAttribute="centerX" secondItem="uXs-gl-fkj" secondAttribute="centerX" id="KTn-o8-tXI"/>
+                            <constraint firstItem="Gw9-9m-xRV" firstAttribute="leading" secondItem="uXs-gl-fkj" secondAttribute="leadingMargin" constant="20" id="RSf-iQ-VLb"/>
                             <constraint firstItem="NEt-cu-Ul9" firstAttribute="top" secondItem="jjh-Tm-nZh" secondAttribute="bottom" constant="20" id="Ruo-WA-JIk"/>
-                            <constraint firstItem="5EE-fX-Kv3" firstAttribute="leading" secondItem="uXs-gl-fkj" secondAttribute="leading" constant="30" id="Wia-UB-PAn"/>
-                            <constraint firstItem="yBM-wa-7gO" firstAttribute="top" secondItem="NEt-cu-Ul9" secondAttribute="bottom" constant="30" id="e4K-Ad-rMy"/>
-                            <constraint firstAttribute="trailing" secondItem="fmf-Uy-o2q" secondAttribute="trailing" constant="30" id="hqA-e8-JDT"/>
-                            <constraint firstItem="fmf-Uy-o2q" firstAttribute="leading" secondItem="uXs-gl-fkj" secondAttribute="leading" constant="30" id="jzU-87-grh"/>
-                            <constraint firstItem="5EE-fX-Kv3" firstAttribute="top" secondItem="fmf-Uy-o2q" secondAttribute="bottom" constant="20" id="lAi-kQ-CLm"/>
+                            <constraint firstItem="5EE-fX-Kv3" firstAttribute="leading" secondItem="uXs-gl-fkj" secondAttribute="leading" constant="20" id="Wia-UB-PAn"/>
+                            <constraint firstItem="yBM-wa-7gO" firstAttribute="top" secondItem="NEt-cu-Ul9" secondAttribute="bottom" constant="25" id="e4K-Ad-rMy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Gw9-9m-xRV" secondAttribute="trailing" constant="20" id="fhm-cI-jX8"/>
+                            <constraint firstAttribute="trailing" secondItem="fmf-Uy-o2q" secondAttribute="trailing" constant="20" id="hqA-e8-JDT"/>
+                            <constraint firstItem="fmf-Uy-o2q" firstAttribute="leading" secondItem="uXs-gl-fkj" secondAttribute="leading" constant="20" id="jzU-87-grh"/>
+                            <constraint firstItem="5EE-fX-Kv3" firstAttribute="top" secondItem="fmf-Uy-o2q" secondAttribute="bottom" constant="15" id="lAi-kQ-CLm"/>
                             <constraint firstItem="QNq-qO-dcz" firstAttribute="leading" secondItem="uXs-gl-fkj" secondAttribute="leading" constant="30" id="mJ4-mK-ulu"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Upgrade App" id="R6Z-Jp-fDT"/>
                     <connections>
                         <outlet property="purchaseButton" destination="j7o-ln-1SV" id="2r7-Py-K9j"/>
+                        <outlet property="restoreButton" destination="NEt-cu-Ul9" id="Tg5-5h-dXg"/>
+                        <outlet property="statusLabel" destination="Gw9-9m-xRV" id="zuK-ju-OnO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bX5-zs-Kuf" userLabel="First Responder" sceneMemberID="firstResponder"/>

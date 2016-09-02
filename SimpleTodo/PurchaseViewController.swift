@@ -13,7 +13,13 @@ class PurchaseViewController: UIViewController ,XXXPurchaseManagerDelegate {
     
     @IBOutlet weak var purchaseButton: UIButton!
     
-    var activityView: UIActivityIndicatorView!
+    @IBOutlet weak var restoreButton: UIButton!
+    
+    @IBOutlet weak var statusLabel: UILabel!
+    
+    var buttonActivityView: UIActivityIndicatorView!
+    
+    var purchaseActivityView: UIActivityIndicatorView!
     
     let userDefaults = NSUserDefaults.standardUserDefaults()
     
@@ -28,11 +34,11 @@ class PurchaseViewController: UIViewController ,XXXPurchaseManagerDelegate {
         purchaseButton.setTitleColor(UIColor.redColor(), forState: .Normal)
         purchaseButton.setTitleColor(UIColor.redColor(), forState: .Highlighted)
         
-        activityView = UIActivityIndicatorView()
-        activityView.center = CGPointMake(purchaseButton.bounds.size.width / 2, purchaseButton.bounds.size.height / 2)
-        activityView.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
-        purchaseButton.addSubview(activityView)
-        activityView.startAnimating()
+        buttonActivityView = UIActivityIndicatorView()
+        buttonActivityView.center = CGPointMake(purchaseButton.bounds.size.width / 2, purchaseButton.bounds.size.height / 2)
+        buttonActivityView.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
+        purchaseButton.addSubview(buttonActivityView)
+        buttonActivityView.startAnimating()
         
         //プロダクトID達
         let productIdentifiers = ["com.kdevelop.SingleTodoList.upgrade"]
@@ -43,17 +49,34 @@ class PurchaseViewController: UIViewController ,XXXPurchaseManagerDelegate {
                     //価格を抽出
                     let priceString = XXXProductManager.priceStringFromProduct(product)
                     /*価格情報を使って表示を更新したり。*/
-                    self.activityView.stopAnimating()
-                    self.activityView.removeFromSuperview()
+                    self.buttonActivityView.stopAnimating()
+                    self.buttonActivityView.removeFromSuperview()
                     self.purchaseButton.setTitle(priceString, forState: .Normal)
                     
                 }
         })
+        
+        buttonStatusChange()
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func buttonStatusChange(){
+        if userDefaults.boolForKey("upgrade") {
+            statusLabel.text = "You have been already purchased"
+            purchaseButton.enabled = false
+            purchaseButton.alpha = 0.3
+            restoreButton.enabled = false
+            restoreButton.alpha = 0.8
+        } else {
+            statusLabel.text = ""
+            purchaseButton.enabled = true
+            restoreButton.enabled = true
+        }
     }
     
     @IBAction func pushPurchaseButton(sender: UIButton) {
@@ -105,6 +128,8 @@ class PurchaseViewController: UIViewController ,XXXPurchaseManagerDelegate {
         ac.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
         self.presentViewController(ac, animated: true, completion: nil)
         
+        buttonStatusChange()
+        
         //コンテンツ解放が終了したら、この処理を実行(true: 課金処理全部完了, false 課金処理中断)
         decisionHandler(complete: true)
     }
@@ -122,6 +147,9 @@ class PurchaseViewController: UIViewController ,XXXPurchaseManagerDelegate {
         let ac = UIAlertController(title: "purchase finish!", message: nil, preferredStyle: .Alert)
         ac.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
         self.presentViewController(ac, animated: true, completion: nil)
+        
+        buttonStatusChange()
+        
         //コンテンツ解放が終了したら、この処理を実行(true: 課金処理全部完了, false 課金処理中断)
         decisionHandler(complete: true)
     }
@@ -149,9 +177,11 @@ class PurchaseViewController: UIViewController ,XXXPurchaseManagerDelegate {
          
          
          */
+        /*
         let ac = UIAlertController(title: "restore finish!", message: nil, preferredStyle: .Alert)
         ac.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
         self.presentViewController(ac, animated: true, completion: nil)
+        */
     }
     
     func purchaseManagerDidDeferred(purchaseManager: XXXPurchaseManager!) {

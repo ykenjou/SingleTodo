@@ -7,40 +7,40 @@ provides-member:
 - ["C10SimpleTodo18EditViewController", ""]
 provides-dynamic-lookup:
 - "viewDidLoad"
-- "pushSaveButton"
-- "didReceiveMemoryWarning"
-- "appDelegate"
-- "textView"
 - "pushCancelButton"
+- "pushSaveButton"
+- "appDelegate"
+- "didReceiveMemoryWarning"
+- "textView"
 depends-top-level:
-- !private "CGRect"
+- "AppDelegate"
+- !private "Void"
 - !private "NSCharacterSet"
+- !private "!="
 - !private "UIBarStyle"
-- !private "UIAlertControllerStyle"
-- !private "Array"
-- !private "Item"
-- "UIViewController"
-- !private "UIBarButtonItem"
+- !private "String"
+- "EditViewController"
 - !private "UIBarButtonSystemItem"
 - !private "AddViewController"
+- !private "UIAlertControllerStyle"
 - !private "NSInteger"
-- "UIApplication"
-- "EditViewController"
-- !private "!="
-- !private "UIAlertActionStyle"
 - "UITextView"
-- !private "print"
-- !private "Void"
-- "BooleanLiteralType"
-- !private "String"
-- !private "NSPredicate"
-- !private "UIAlertAction"
-- !private "NSFetchRequest"
-- !private "UIToolbar"
-- !private "UIColor"
-- !private "UIAlertController"
+- !private "UIBarButtonItem"
+- "UIApplication"
 - !private "StringLiteralType"
-- "AppDelegate"
+- !private "Array"
+- !private "NSPredicate"
+- "UIViewController"
+- !private "UIAlertController"
+- !private "Item"
+- !private "NSFetchRequest"
+- !private "UIColor"
+- !private "print"
+- "BooleanLiteralType"
+- !private "CGRect"
+- !private "UIToolbar"
+- !private "UIAlertAction"
+- !private "UIAlertActionStyle"
 depends-member:
 - !private ["C10SimpleTodo17AddViewController", "pushCancelButton"]
 - !private ["C10SimpleTodo17AddViewController", "pushSaveButton"]
@@ -1027,6 +1027,10 @@ depends-member:
 - ["CSo16UIViewController", "viewDidLoad"]
 - ["CSo16UIViewController", ""]
 - !private ["Ps31UnicodeScalarLiteralConvertible", "stringByTrimmingCharactersInSet"]
+- !private ["P10SimpleTodo26XXXPurchaseManagerDelegate", "displayOrder"]
+- !private ["P10SimpleTodo26XXXPurchaseManagerDelegate", "itemText"]
+- !private ["P10SimpleTodo26XXXPurchaseManagerDelegate", "managedObjectContext"]
+- !private ["P10SimpleTodo26XXXPurchaseManagerDelegate", "saveContext"]
 - !private ["Ps10_ArrayType", "Element"]
 - !private ["Ps10_ArrayType", "Index"]
 - !private ["Ps10_ArrayType", "subscript"]
@@ -1149,6 +1153,7 @@ depends-nominal:
 - !private "CSo6UIView"
 - "CSo16UIViewController"
 - !private "Ps31UnicodeScalarLiteralConvertible"
+- !private "P10SimpleTodo26XXXPurchaseManagerDelegate"
 - !private "Ps10_ArrayType"
 - !private "Ps33_BuiltinBooleanLiteralConvertible"
 - !private "Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible"

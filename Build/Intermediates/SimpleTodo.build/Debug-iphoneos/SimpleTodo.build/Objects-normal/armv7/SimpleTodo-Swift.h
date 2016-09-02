@@ -122,6 +122,20 @@ SWIFT_CLASS("_TtC10SimpleTodo17AddViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class XXXPurchaseManager;
+@class SKPaymentTransaction;
+@class NSError;
+
+SWIFT_PROTOCOL("_TtP10SimpleTodo26XXXPurchaseManagerDelegate_")
+@protocol XXXPurchaseManagerDelegate
+@optional
+- (void)purchaseManager:(XXXPurchaseManager * _Null_unspecified)purchaseManager didFinishPurchaseWithTransaction:(SKPaymentTransaction * _Null_unspecified)transaction decisionHandler:(void (^ _Null_unspecified)(BOOL))decisionHandler;
+- (void)purchaseManager:(XXXPurchaseManager * _Null_unspecified)purchaseManager didFinishUntreatedPurchaseWithTransaction:(SKPaymentTransaction * _Null_unspecified)transaction decisionHandler:(void (^ _Null_unspecified)(BOOL))decisionHandler;
+- (void)purchaseManagerDidFinishRestore:(XXXPurchaseManager * _Null_unspecified)purchaseManager;
+- (void)purchaseManager:(XXXPurchaseManager * _Null_unspecified)purchaseManager didFailWithError:(NSError * _Null_unspecified)error;
+- (void)purchaseManagerDidDeferred:(XXXPurchaseManager * _Null_unspecified)purchaseManager;
+@end
+
 @class UIWindow;
 @class NSString;
 @class NSNumber;
@@ -134,7 +148,7 @@ SWIFT_CLASS("_TtC10SimpleTodo17AddViewController")
 @class NSManagedObjectContext;
 
 SWIFT_CLASS("_TtC10SimpleTodo11AppDelegate")
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <XXXPurchaseManagerDelegate, UIApplicationDelegate>
 @property (nonatomic, strong) UIWindow * _Nullable window;
 @property (nonatomic, strong) NSString * _Nullable itemText;
 @property (nonatomic, strong) NSNumber * _Nullable displayOrder;
@@ -151,6 +165,15 @@ SWIFT_CLASS("_TtC10SimpleTodo11AppDelegate")
 @property (nonatomic, strong) NSManagedObjectContext * _Nonnull managedObjectContext;
 - (void)saveContext;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC10SimpleTodo19ColorViewController")
+@interface ColorViewController : UIViewController
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
@@ -255,20 +278,37 @@ SWIFT_CLASS("_TtC10SimpleTodo18MainViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UIActivityIndicatorView;
 @class UIButton;
+@class UILabel;
 
 SWIFT_CLASS("_TtC10SimpleTodo22PurchaseViewController")
-@interface PurchaseViewController : UIViewController
+@interface PurchaseViewController : UIViewController <XXXPurchaseManagerDelegate>
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified purchaseButton;
-@property (nonatomic, weak) IBOutlet UITextView * _Null_unspecified textView;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified restoreButton;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified statusLabel;
+@property (nonatomic, strong) UIActivityIndicatorView * _Null_unspecified buttonActivityView;
+@property (nonatomic, strong) UIActivityIndicatorView * _Null_unspecified purchaseActivityView;
+@property (nonatomic, readonly, strong) NSUserDefaults * _Nonnull userDefaults;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
+- (void)buttonStatusChange;
+- (IBAction)pushPurchaseButton:(UIButton * _Nonnull)sender;
+- (IBAction)pushRestoreButton:(UIButton * _Nonnull)sender;
+- (void)startPurchase:(NSString * _Nonnull)productIdentifier;
+
+/// リストア開始
+- (void)startRestore;
+- (void)purchaseManager:(XXXPurchaseManager * _Null_unspecified)purchaseManager didFinishPurchaseWithTransaction:(SKPaymentTransaction * _Null_unspecified)transaction decisionHandler:(void (^ _Null_unspecified)(BOOL))decisionHandler;
+- (void)purchaseManager:(XXXPurchaseManager * _Null_unspecified)purchaseManager didFinishUntreatedPurchaseWithTransaction:(SKPaymentTransaction * _Null_unspecified)transaction decisionHandler:(void (^ _Null_unspecified)(BOOL))decisionHandler;
+- (void)purchaseManager:(XXXPurchaseManager * _Null_unspecified)purchaseManager didFailWithError:(NSError * _Null_unspecified)error;
+- (void)purchaseManagerDidFinishRestore:(XXXPurchaseManager * _Null_unspecified)purchaseManager;
+- (void)purchaseManagerDidDeferred:(XXXPurchaseManager * _Null_unspecified)purchaseManager;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
 @class UIStoryboard;
-@class UILabel;
 
 SWIFT_CLASS("_TtC10SimpleTodo21SettingViewController")
 @interface SettingViewController : UITableViewController
@@ -303,7 +343,6 @@ SWIFT_CLASS("_TtC10SimpleTodo21SettingViewController")
 @end
 
 @class SKProduct;
-@class NSError;
 @class SKProductsRequest;
 @class SKProductsResponse;
 @class SKRequest;
@@ -321,5 +360,26 @@ SWIFT_CLASS("_TtC10SimpleTodo17XXXProductManager")
 + (NSString * _Nonnull)priceStringFromProduct:(SKProduct * _Null_unspecified)product;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
+
+@class SKPaymentQueue;
+
+SWIFT_CLASS("_TtC10SimpleTodo18XXXPurchaseManager")
+@interface XXXPurchaseManager : NSObject <SKPaymentTransactionObserver>
+@property (nonatomic, strong) id <XXXPurchaseManagerDelegate> _Nullable delegate;
+
+/// シングルトン
++ (XXXPurchaseManager * _Nonnull)sharedManager;
+
+/// 課金開始
+- (void)startWithProduct:(SKProduct * _Nonnull)product;
+
+/// リストア開始
+- (void)startRestore;
+- (void)paymentQueue:(SKPaymentQueue * _Nonnull)queue updatedTransactions:(NSArray<SKPaymentTransaction *> * _Nonnull)transactions;
+- (void)paymentQueue:(SKPaymentQueue * _Nonnull)queue restoreCompletedTransactionsFailedWithError:(NSError * _Nonnull)error;
+- (void)paymentQueueRestoreCompletedTransactionsFinished:(SKPaymentQueue * _Nonnull)queue;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
 
 #pragma clang diagnostic pop
