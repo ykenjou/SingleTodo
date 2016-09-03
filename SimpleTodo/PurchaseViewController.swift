@@ -40,6 +40,11 @@ class PurchaseViewController: UIViewController ,XXXPurchaseManagerDelegate {
         purchaseButton.addSubview(buttonActivityView)
         buttonActivityView.startAnimating()
         
+        purchaseActivityView = UIActivityIndicatorView()
+        purchaseActivityView.center = CGPointMake(self.view.bounds.size.width / 2, self.view.bounds.size.height / 2)
+        purchaseActivityView.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
+        purchaseActivityView.startAnimating()
+        
         //プロダクトID達
         let productIdentifiers = ["com.kdevelop.SingleTodoList.upgrade"]
         
@@ -75,16 +80,24 @@ class PurchaseViewController: UIViewController ,XXXPurchaseManagerDelegate {
         } else {
             statusLabel.text = ""
             purchaseButton.enabled = true
+            purchaseButton.alpha = 1.0
             restoreButton.enabled = true
+            restoreButton.alpha = 1.0
         }
     }
     
     @IBAction func pushPurchaseButton(sender: UIButton) {
         self.startPurchase("com.kdevelop.SingleTodoList.upgrade")
+        self.view.addSubview(purchaseActivityView)
+        purchaseButton.enabled = false
+        purchaseButton.alpha = 0.3
     }
 
     @IBAction func pushRestoreButton(sender: UIButton) {
         self.startRestore()
+        self.view.addSubview(purchaseActivityView)
+        restoreButton.enabled = false
+        restoreButton.alpha = 0.8
     }
     
     func startPurchase(productIdentifier : String) {
@@ -129,6 +142,7 @@ class PurchaseViewController: UIViewController ,XXXPurchaseManagerDelegate {
         self.presentViewController(ac, animated: true, completion: nil)
         
         buttonStatusChange()
+        purchaseActivityView.removeFromSuperview()
         
         //コンテンツ解放が終了したら、この処理を実行(true: 課金処理全部完了, false 課金処理中断)
         decisionHandler(complete: true)
@@ -144,11 +158,13 @@ class PurchaseViewController: UIViewController ,XXXPurchaseManagerDelegate {
          
          */
         userDefaults.setBool(true, forKey: "upgrade")
+        
         let ac = UIAlertController(title: "purchase finish!", message: nil, preferredStyle: .Alert)
         ac.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
         self.presentViewController(ac, animated: true, completion: nil)
         
         buttonStatusChange()
+        purchaseActivityView.removeFromSuperview()
         
         //コンテンツ解放が終了したら、この処理を実行(true: 課金処理全部完了, false 課金処理中断)
         decisionHandler(complete: true)
@@ -163,6 +179,9 @@ class PurchaseViewController: UIViewController ,XXXPurchaseManagerDelegate {
          
          
          */
+        purchaseActivityView.removeFromSuperview()
+        buttonStatusChange()
+        
         let ac = UIAlertController(title: "purchase fail...", message: error.localizedDescription, preferredStyle: .Alert)
         ac.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
         self.presentViewController(ac, animated: true, completion: nil)
@@ -177,6 +196,8 @@ class PurchaseViewController: UIViewController ,XXXPurchaseManagerDelegate {
          
          
          */
+        purchaseActivityView.removeFromSuperview()
+        buttonStatusChange()
         /*
         let ac = UIAlertController(title: "restore finish!", message: nil, preferredStyle: .Alert)
         ac.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
@@ -193,6 +214,9 @@ class PurchaseViewController: UIViewController ,XXXPurchaseManagerDelegate {
          
          
          */
+        purchaseActivityView.removeFromSuperview()
+        buttonStatusChange()
+        
         let ac = UIAlertController(title: "purcase defferd.", message: nil, preferredStyle: .Alert)
         ac.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
         self.presentViewController(ac, animated: true, completion: nil)

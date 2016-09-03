@@ -167,11 +167,38 @@ SWIFT_CLASS("_TtC10SimpleTodo11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UIColor;
+@class UIStoryboard;
+@class UIButton;
 
 SWIFT_CLASS("_TtC10SimpleTodo19ColorViewController")
 @interface ColorViewController : UIViewController
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified blueButton;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified redButton;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified greenButton;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified orangeButton;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified purpleButton;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified lightgrayButton;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified darkgrayButton;
+@property (nonatomic, readonly, strong) UIColor * _Nonnull blueColor;
+@property (nonatomic, readonly, strong) UIColor * _Nonnull redColor;
+@property (nonatomic, readonly, strong) UIColor * _Nonnull greenColor;
+@property (nonatomic, readonly, strong) UIColor * _Nonnull orangeColor;
+@property (nonatomic, readonly, strong) UIColor * _Nonnull purpleColor;
+@property (nonatomic, readonly, strong) UIColor * _Nonnull lightGrayColor;
+@property (nonatomic, readonly, strong) UIColor * _Nonnull darkGrayColor;
+@property (nonatomic, strong) UIStoryboard * _Nullable colorStoryboard;
+@property (nonatomic, strong) UIViewController * _Nullable mainViewController;
+@property (nonatomic, readonly, strong) NSUserDefaults * _Nonnull userDefaults;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
+- (IBAction)pushBlueButton:(UIButton * _Nonnull)sender;
+- (IBAction)pushRedButton:(UIButton * _Nonnull)sender;
+- (IBAction)pushGreenButton:(UIButton * _Nonnull)sender;
+- (IBAction)pushOrangeButton:(UIButton * _Nonnull)sender;
+- (IBAction)pushPurpleButton:(UIButton * _Nonnull)sender;
+- (IBAction)pushLightgrayButton:(UIButton * _Nonnull)sender;
+- (IBAction)pushDarkgrayButton:(UIButton * _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -255,9 +282,9 @@ SWIFT_CLASS("_TtC10SimpleTodo18MainViewController")
 @property (nonatomic, strong) NSFetchedResultsController * _Nonnull fetchedResultsController;
 - (void)viewDidLoad;
 - (void)viewWillAppear:(BOOL)animated;
-- (void)viewDidAppear:(BOOL)animated;
 - (void)didReceiveMemoryWarning;
 - (void)controllerDidChangeContent:(NSFetchedResultsController * _Nonnull)controller;
+- (void)setNaviToolbarColor;
 - (NSInteger)setBadgeValue;
 - (IBAction)settingButton:(UIBarButtonItem * _Nonnull)sender;
 - (void)cellLongPressed:(UILongPressGestureRecognizer * _Nonnull)recognizer;
@@ -279,7 +306,6 @@ SWIFT_CLASS("_TtC10SimpleTodo18MainViewController")
 @end
 
 @class UIActivityIndicatorView;
-@class UIButton;
 @class UILabel;
 
 SWIFT_CLASS("_TtC10SimpleTodo22PurchaseViewController")
@@ -308,7 +334,6 @@ SWIFT_CLASS("_TtC10SimpleTodo22PurchaseViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class UIStoryboard;
 
 SWIFT_CLASS("_TtC10SimpleTodo21SettingViewController")
 @interface SettingViewController : UITableViewController

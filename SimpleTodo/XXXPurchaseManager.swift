@@ -123,7 +123,7 @@ class XXXPurchaseManager: NSObject , SKPaymentTransactionObserver {
         //リストア失敗時に呼ばれる
         self.delegate?.purchaseManager?(self, didFailWithError: error)
         self.isRestore = false
-        print(error)
+        //print(error)
     }
     
     func paymentQueueRestoreCompletedTransactionsFinished(queue: SKPaymentQueue) {
@@ -161,7 +161,7 @@ class XXXPurchaseManager: NSObject , SKPaymentTransactionObserver {
         self.delegate?.purchaseManager?(self, didFailWithError: transaction.error)
         self.productIdentifier = nil
         SKPaymentQueue.defaultQueue().finishTransaction(transaction)
-        print(transaction.error)
+        //print(transaction.error)
     }
     
     private func restoreTransaction(transaction : SKPaymentTransaction) {

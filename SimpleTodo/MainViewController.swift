@@ -75,13 +75,10 @@ class MainViewController:  UIViewController , UITableViewDataSource , UITableVie
             UIApplication.sharedApplication().applicationIconBadgeNumber = -1
         }
         
-        
-        navigationController!.navigationBar.barTintColor = UIColor(red: 28 / 255, green: 67 / 255, blue: 155 / 255, alpha: 1.0)
         navigationController!.navigationBar.tintColor = UIColor.whiteColor()
         navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         navigationController!.navigationBar.translucent = false
         
-        btmToolBar.barTintColor = UIColor(red: 28 / 255, green: 67 / 255, blue: 155 / 255, alpha: 1.0)
         btmToolBar.tintColor = UIColor.whiteColor()
         btmToolBar.translucent = false
         
@@ -92,19 +89,19 @@ class MainViewController:  UIViewController , UITableViewDataSource , UITableVie
         longPressRecognizer.delegate = self
         tableView.addGestureRecognizer(longPressRecognizer)
         
-        //self.view.frame.size.height
-        
         if userDefaults.boolForKey("firstLaunch") {
-            setFirstItemData("＋ボタンを押してデータを追加してください", checked: 0)
-            setFirstItemData("チェック済みの項目はゴミ箱ボタンで削除できます", checked: 1)
+            setFirstItemData("下にある＋ボタンを押して項目を追加してください", checked: 0)
+            setFirstItemData("左下のゴミ箱ボタンでチェック済みの項目を削除できます", checked: 1)
             userDefaults.setBool(false, forKey: "firstLaunch")
         }
         
         bannerView = gadController.gadBannerInit(self.view.frame.width, frameHeight: 50, viewController: self)
-        bannerView!.frame.origin = CGPointMake(0, self.view.frame.height - 50)
-        //bannerView!.frame.origin = CGPointMake(0, 0)
+        //bannerView!.frame.origin = CGPointMake(0, self.view.frame.height - 50)
+        //bannerView!.frame.origin = CGPointMake(0, 560)
+        //print(self.view.frame.height)
         
         popMessageView.layer.cornerRadius = 10
+        
         
         
     }
@@ -112,9 +109,10 @@ class MainViewController:  UIViewController , UITableViewDataSource , UITableVie
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
+        setNaviToolbarColor()
         tableView.reloadData()
         
-        //navigationController!.navigationBar.tintColor = UIColor.blackColor()
+        bannerView!.frame.origin = CGPointMake(0, self.view.frame.height - 50)
         
         
         if userDefaults.boolForKey("upgrade") {
@@ -132,17 +130,6 @@ class MainViewController:  UIViewController , UITableViewDataSource , UITableVie
         }
     }
     
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-    }
-    
-    /*
-    override func updateViewConstraints() {
-        
-        super.updateViewConstraints()
-    }
-     */
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -157,6 +144,38 @@ class MainViewController:  UIViewController , UITableViewDataSource , UITableVie
             UIApplication.sharedApplication().applicationIconBadgeNumber = setBadgeValue()
         } else {
             UIApplication.sharedApplication().applicationIconBadgeNumber = -1
+        }
+    }
+    
+    internal func setNaviToolbarColor(){
+        let color:String = userDefaults.stringForKey("color")!
+        let colorViewController = ColorViewController()
+        switch color {
+            case "blue":
+                navigationController!.navigationBar.barTintColor = colorViewController.blueColor
+                btmToolBar.barTintColor = colorViewController.blueColor
+            case "red":
+                navigationController!.navigationBar.barTintColor = colorViewController.redColor
+                btmToolBar.barTintColor = colorViewController.redColor
+            case "green":
+                navigationController!.navigationBar.barTintColor = colorViewController.greenColor
+                btmToolBar.barTintColor = colorViewController.greenColor
+            case "orange":
+                navigationController!.navigationBar.barTintColor = colorViewController.orangeColor
+                btmToolBar.barTintColor = colorViewController.orangeColor
+            case "purple":
+                navigationController!.navigationBar.barTintColor = colorViewController.purpleColor
+                btmToolBar.barTintColor = colorViewController.purpleColor
+            case "lightgray":
+                navigationController!.navigationBar.barTintColor = colorViewController.lightGrayColor
+                btmToolBar.barTintColor = colorViewController.lightGrayColor
+            case "darkgray":
+                navigationController!.navigationBar.barTintColor = colorViewController.darkGrayColor
+                btmToolBar.barTintColor = colorViewController.darkGrayColor
+            default:
+                navigationController!.navigationBar.barTintColor = colorViewController.blueColor
+                btmToolBar.barTintColor = colorViewController.blueColor
+            
         }
     }
     
@@ -263,32 +282,7 @@ class MainViewController:  UIViewController , UITableViewDataSource , UITableVie
         return cell
     }
     
-    //セクションヘッダー高さ
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        /*
-        if userDefaults.boolForKey("showAd") {
-            return 50
-        } else {
-            
-        }
-        */
-        return 0
-    }
     
-    //セクションヘッダーview
-    /*
-    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        if userDefaults.boolForKey("showAd") {
-            let gadController = GadController()
-            let bannerView:GADBannerView = gadController.gadBannerInit(self.view.frame.width, frameHeight: 50, viewController: self)
-            return bannerView
-        } else {
-            return UIView()
-        }
-        
-    }
-    */
-
     //セル選択
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
@@ -385,8 +379,7 @@ class MainViewController:  UIViewController , UITableViewDataSource , UITableVie
     func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath) {
         let sourceIndex: NSInteger = sourceIndexPath.row
         let toIndex: NSInteger = destinationIndexPath.row
-        //print(sourceIndex)
-        //print(toIndex)
+
         
         if sourceIndex == toIndex {
             return
@@ -394,7 +387,7 @@ class MainViewController:  UIViewController , UITableViewDataSource , UITableVie
         
         
         let affectedItem = fetchedResultsController.objectAtIndexPath(sourceIndexPath) as! Item
-        //print(affectedItem.text)
+
         affectedItem.displayOrder = toIndex
         
         let start:NSInteger

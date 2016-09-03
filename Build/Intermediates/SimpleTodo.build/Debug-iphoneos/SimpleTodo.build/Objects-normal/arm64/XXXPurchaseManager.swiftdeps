@@ -10,46 +10,45 @@ provides-member:
 - ["P10SimpleTodo26XXXPurchaseManagerDelegate", ""]
 provides-dynamic-lookup:
 - "startWithProduct"
-- "purchaseManagerDidDeferred"
 - "paymentQueueRestoreCompletedTransactionsFinished"
-- "paymentQueue"
-- "paymentQueue"
-- "purchaseManager"
-- "purchaseManager"
-- "purchaseManager"
 - "delegate"
-- "sharedManager"
-- "purchaseManagerDidFinishRestore"
 - "startRestore"
+- "sharedManager"
+- "paymentQueue"
+- "paymentQueue"
+- "purchaseManagerDidFinishRestore"
+- "purchaseManager"
+- "purchaseManager"
+- "purchaseManager"
+- "purchaseManagerDidDeferred"
 depends-top-level:
-- "BooleanLiteralType"
-- "XXXPurchaseManager"
-- !private "!="
-- "SKPaymentTransaction"
-- "NSError"
-- "SKProduct"
-- "Bool"
-- !private "NSLocalizedDescriptionKey"
-- "SKPaymentQueue"
-- "XXXPurchaseManagerDelegate"
-- !private "+"
-- "NSObject"
+- "Void"
 - !private "purchaseManagerSharedManager"
-- !private "UnicodeScalarType"
-- !private "SKMutablePayment"
-- !private "UIAlertActionStyle"
+- "BooleanLiteralType"
+- "SKPaymentQueue"
+- !private "Dictionary"
 - "String"
 - !private "+="
-- !private ">"
+- !private "+"
 - !private "UIAlertAction"
-- !private "StringLiteralType"
-- !private "print"
-- "Void"
+- !private ">"
+- !private "UIAlertActionStyle"
+- !private "UnicodeScalarType"
+- "SKPaymentTransaction"
+- "Bool"
+- !private "NSLocalizedDescriptionKey"
 - !private "UIApplication"
+- "NSError"
 - !private "UIAlertController"
-- "SKPaymentTransactionObserver"
-- !private "Dictionary"
+- "SKProduct"
+- "XXXPurchaseManager"
+- "XXXPurchaseManagerDelegate"
+- !private "!="
+- !private "StringLiteralType"
 - !private "=="
+- !private "SKMutablePayment"
+- "NSObject"
+- "SKPaymentTransactionObserver"
 depends-member:
 - !private ["Ps9AnyObject", "NSError"]
 - !private ["Ps9AnyObject", "NSLocalizedDescriptionKey"]
@@ -78,7 +77,6 @@ depends-member:
 - ["Ps9AnyObject", "paymentQueue"]
 - ["Ps9AnyObject", "paymentQueueRestoreCompletedTransactionsFinished"]
 - !private ["Ps9AnyObject", "presentViewController"]
-- !private ["Ps9AnyObject", "print"]
 - ["Ps9AnyObject", "productIdentifier"]
 - !private ["Ps9AnyObject", "purchaseManagerSharedManager"]
 - !private ["Ps9AnyObject", "restoreCompletedTransactions"]
@@ -139,7 +137,6 @@ depends-member:
 - ["Ps11CVarArgType", "paymentQueue"]
 - ["Ps11CVarArgType", "paymentQueueRestoreCompletedTransactionsFinished"]
 - !private ["Ps11CVarArgType", "presentViewController"]
-- !private ["Ps11CVarArgType", "print"]
 - ["Ps11CVarArgType", "productIdentifier"]
 - !private ["Ps11CVarArgType", "purchaseManagerSharedManager"]
 - !private ["Ps11CVarArgType", "restoreCompletedTransactions"]
@@ -197,7 +194,6 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "paymentQueue"]
 - ["Ps28CustomDebugStringConvertible", "paymentQueueRestoreCompletedTransactionsFinished"]
 - !private ["Ps28CustomDebugStringConvertible", "presentViewController"]
-- !private ["Ps28CustomDebugStringConvertible", "print"]
 - ["Ps28CustomDebugStringConvertible", "productIdentifier"]
 - !private ["Ps28CustomDebugStringConvertible", "purchaseManagerSharedManager"]
 - !private ["Ps28CustomDebugStringConvertible", "restoreCompletedTransactions"]
@@ -246,7 +242,6 @@ depends-member:
 - ["Ps23CustomStringConvertible", "paymentQueue"]
 - ["Ps23CustomStringConvertible", "paymentQueueRestoreCompletedTransactionsFinished"]
 - !private ["Ps23CustomStringConvertible", "presentViewController"]
-- !private ["Ps23CustomStringConvertible", "print"]
 - ["Ps23CustomStringConvertible", "productIdentifier"]
 - !private ["Ps23CustomStringConvertible", "purchaseManagerSharedManager"]
 - !private ["Ps23CustomStringConvertible", "restoreCompletedTransactions"]
@@ -301,7 +296,6 @@ depends-member:
 - ["Ps9Equatable", "paymentQueue"]
 - ["Ps9Equatable", "paymentQueueRestoreCompletedTransactionsFinished"]
 - !private ["Ps9Equatable", "presentViewController"]
-- !private ["Ps9Equatable", "print"]
 - ["Ps9Equatable", "productIdentifier"]
 - !private ["Ps9Equatable", "purchaseManagerSharedManager"]
 - !private ["Ps9Equatable", "restoreCompletedTransactions"]
@@ -357,7 +351,6 @@ depends-member:
 - ["Ps8Hashable", "paymentQueue"]
 - ["Ps8Hashable", "paymentQueueRestoreCompletedTransactionsFinished"]
 - !private ["Ps8Hashable", "presentViewController"]
-- !private ["Ps8Hashable", "print"]
 - ["Ps8Hashable", "productIdentifier"]
 - !private ["Ps8Hashable", "purchaseManagerSharedManager"]
 - !private ["Ps8Hashable", "restoreCompletedTransactions"]
@@ -454,7 +447,6 @@ depends-member:
 - ["CSo8NSObject", "paymentQueue"]
 - ["CSo8NSObject", "paymentQueueRestoreCompletedTransactionsFinished"]
 - !private ["CSo8NSObject", "presentViewController"]
-- !private ["CSo8NSObject", "print"]
 - ["CSo8NSObject", "productIdentifier"]
 - !private ["CSo8NSObject", "purchaseManagerSharedManager"]
 - !private ["CSo8NSObject", "restoreCompletedTransactions"]
@@ -493,7 +485,6 @@ depends-member:
 - ["PSo16NSObjectProtocol", "paymentQueue"]
 - ["PSo16NSObjectProtocol", "paymentQueueRestoreCompletedTransactionsFinished"]
 - !private ["PSo16NSObjectProtocol", "presentViewController"]
-- !private ["PSo16NSObjectProtocol", "print"]
 - ["PSo16NSObjectProtocol", "productIdentifier"]
 - !private ["PSo16NSObjectProtocol", "purchaseManagerSharedManager"]
 - !private ["PSo16NSObjectProtocol", "restoreCompletedTransactions"]
@@ -557,7 +548,6 @@ depends-member:
 - !private ["PSo28SKPaymentTransactionObserver", "isRestore"]
 - ["PSo28SKPaymentTransactionObserver", "paymentQueue"]
 - ["PSo28SKPaymentTransactionObserver", "paymentQueueRestoreCompletedTransactionsFinished"]
-- !private ["PSo28SKPaymentTransactionObserver", "print"]
 - !private ["PSo28SKPaymentTransactionObserver", "productIdentifier"]
 - !private ["PSo28SKPaymentTransactionObserver", "purchaseManagerSharedManager"]
 - !private ["PSo28SKPaymentTransactionObserver", "restoreTransaction"]
@@ -661,7 +651,6 @@ depends-member:
 - !private ["C10SimpleTodo18XXXPurchaseManager", "isRestore"]
 - ["C10SimpleTodo18XXXPurchaseManager", "paymentQueue"]
 - ["C10SimpleTodo18XXXPurchaseManager", "paymentQueueRestoreCompletedTransactionsFinished"]
-- !private ["C10SimpleTodo18XXXPurchaseManager", "print"]
 - !private ["C10SimpleTodo18XXXPurchaseManager", "productIdentifier"]
 - !private ["C10SimpleTodo18XXXPurchaseManager", "purchaseManagerSharedManager"]
 - !private ["C10SimpleTodo18XXXPurchaseManager", "restoreTransaction"]

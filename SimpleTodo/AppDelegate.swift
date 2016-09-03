@@ -30,7 +30,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate ,XXXPurchaseManagerDelegat
             "sound" : true,
             "badge" : true,
             "upgrade": false,
-            "fontSize": 18
+            "fontSize": 18,
+            "color": "blue"
         ]
         userDefaults.registerDefaults(defaultsValues as! [String : AnyObject])
         
