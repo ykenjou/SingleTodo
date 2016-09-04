@@ -14,120 +14,119 @@ provides-member:
 - ["CSo6UIView", "fadeOut"]
 - ["CSo6UIView", "fadeOut"]
 provides-dynamic-lookup:
-- "pushTrashButton"
-- "showPopMessageView"
-- "appDelegate"
-- "fetchedResultsController"
-- "fadeOut"
-- "fadeIn"
-- "bannerView"
-- "cellLongPressed"
-- "setBadgeValue"
-- "popMessageView"
-- "numberOfSectionsInTableView"
-- "btmToolBarConstraint"
-- "pushAddButton"
-- "controllerDidChangeContent"
-- "settingButton"
 - "didReceiveMemoryWarning"
-- "viewDidLoad"
-- "gadController"
-- "setEditing"
-- "viewWillAppear"
-- "userDefaults"
-- "btmToolBar"
+- "btmToolBarConstraint"
 - "setCheckedValue"
+- "popMessageView"
+- "cellLongPressed"
+- "gadController"
+- "numberOfSectionsInTableView"
+- "controllerDidChangeContent"
+- "fadeIn"
+- "appDelegate"
+- "tableView"
+- "tableView"
+- "tableView"
+- "tableView"
+- "tableView"
+- "tableView"
+- "tableView"
+- "viewDidLoad"
+- "viewWillAppear"
 - "setNaviToolbarColor"
-- "tableView"
-- "tableView"
-- "tableView"
-- "tableView"
-- "tableView"
-- "tableView"
-- "tableView"
-- "tableView"
+- "pushAddButton"
+- "btmToolBar"
+- "setBadgeValue"
+- "settingButton"
+- "fadeOut"
+- "showPopMessageView"
+- "fetchedResultsController"
+- "bannerView"
+- "setEditing"
+- "userDefaults"
+- "pushTrashButton"
 depends-top-level:
-- "UIToolbar"
-- !private "dispatch_get_main_queue"
-- "NSInteger"
-- "MainViewController"
-- !private "UIBarButtonSystemItem"
-- !private "NSPredicate"
-- "Bool"
-- "UIView"
-- !private "UIUserNotificationType"
-- !private "UIColor"
-- !private "ColorViewController"
-- "NSFetchedResultsController"
-- "Array"
-- !private "Item"
 - !private "NSError"
-- "UIViewController"
-- "UITableViewDataSource"
-- !private "dispatch_async"
-- "NSIndexPath"
-- "UITableViewRowAction"
-- "UIApplication"
-- "NSTimeInterval"
-- !private "UILabel"
-- "CGFloat"
-- "GADBannerView"
-- !private "NSSortDescriptor"
+- "Bool"
 - "StringLiteralType"
-- !private "Dictionary"
-- !private "*"
-- "UILongPressGestureRecognizer"
-- !private "UIFont"
-- !private "Double"
-- !private "..<"
-- "NSNumber"
-- !private "UIPasteboard"
-- !private "NSEC_PER_SEC"
 - !private "UITableViewCellSelectionStyle"
-- !private "print"
-- !private "String"
-- !private "!="
 - !private "UITableViewScrollPosition"
-- !private "NSEntityDescription"
-- !private "<"
-- !private "AudioServicesPlaySystemSound"
+- !private "NSPredicate"
+- !private "NSForegroundColorAttributeName"
+- "Array"
+- "GADBannerViewDelegate"
+- !private "UIGestureRecognizerState"
+- !private "CGFloat"
+- "UITableViewCell"
+- !private "NSMutableAttributedString"
+- !private "+"
+- !private "Item"
+- !private "print"
+- !private "dispatch_get_main_queue"
+- "UIApplication"
+- "UIToolbar"
+- "UIBarButtonItem"
+- !private "Dictionary"
+- "GadController"
+- !private "UIStoryboard"
 - !private "UIUserNotificationSettings"
 - "UITableView"
-- !private "NSForegroundColorAttributeName"
-- "GADBannerViewDelegate"
-- "FadeType"
-- !private "AddViewController"
-- "UINavigationControllerDelegate"
-- "GadController"
-- !private "EditViewController"
-- "UIGestureRecognizerDelegate"
-- !private "CGPointMake"
-- !private "dispatch_time"
-- "NSFetchedResultsControllerDelegate"
-- !private "NSMutableAttributedString"
-- "UITableViewDelegate"
-- !private "NSFetchRequest"
-- "BooleanLiteralType"
+- !private "dispatch_after"
+- "GADBannerView"
 - !private "DISPATCH_TIME_NOW"
-- !private "UITableViewAutomaticDimension"
+- !private "UILabel"
 - !private "Int64"
-- "AppDelegate"
+- "MainViewController"
+- !private "NSFetchRequest"
+- !private "AddViewController"
+- !private "UITableViewAutomaticDimension"
+- !private "String"
+- !private "UIUserNotificationType"
 - "Int"
-- !private "NSMakeRange"
-- "NSLayoutConstraint"
+- "UIViewController"
+- !private "NSArray"
+- !private "<"
+- "NSInteger"
 - !private "-"
+- !private "NSEC_PER_SEC"
+- !private "UIBarButtonSystemItem"
+- !private "ColorViewController"
 - !private "NSStrikethroughStyleAttributeName"
-- !private "+"
+- !private "dispatch_time"
+- "NSLayoutConstraint"
+- !private "CGPointMake"
+- "UITableViewRowAction"
+- !private "NSSortDescriptor"
 - !private "~="
 - "=="
+- !private "..<"
+- !private "NSMakeRange"
+- !private "dispatch_async"
+- "UILongPressGestureRecognizer"
+- "NSNumber"
+- "NSFetchedResultsController"
+- "NSIndexPath"
+- !private "!="
+- "NSTimeInterval"
+- "BooleanLiteralType"
+- !private "UIPasteboard"
+- !private "NSEntityDescription"
+- !private "AudioServicesPlaySystemSound"
+- !private "UIFont"
+- !private "Double"
+- "UIGestureRecognizerDelegate"
 - "NSUserDefaults"
-- "UIBarButtonItem"
-- "UITableViewCell"
-- !private "UIGestureRecognizerState"
-- !private "UIStoryboard"
-- !private "dispatch_after"
+- !private "*"
+- !private "UIColor"
+- "UINavigationControllerDelegate"
+- !private "EditViewController"
+- "UITableViewDataSource"
+- "UITableViewDelegate"
 - !private "NSManagedObject"
-- !private "NSArray"
+- "AppDelegate"
+- "UIView"
+- "NSFetchedResultsControllerDelegate"
+- "FadeType"
 depends-member:
 - !private ["Ps16AbsoluteValuable", "Normal"]
 - !private ["Ps16AbsoluteValuable", "init"]
@@ -360,6 +359,7 @@ depends-member:
 - !private ["PSo13CAMediaTiming", "cornerRadius"]
 - !private ["V12CoreGraphics7CGFloat", "deinit"]
 - !private ["V12CoreGraphics7CGFloat", "init"]
+- !private ["VSC6CGRect", "height"]
 - !private ["VSC6CGRect", "origin"]
 - !private ["VSC6CGRect", "width"]
 - !private ["Ps11CVarArgType", "AudioServicesPlaySystemSound"]
@@ -1099,6 +1099,7 @@ depends-member:
 - !private ["Ps9Equatable", "grayColor"]
 - !private ["Ps9Equatable", "greenColor"]
 - ["Ps9Equatable", "hashValue"]
+- !private ["Ps9Equatable", "height"]
 - !private ["Ps9Equatable", "hidden"]
 - ["Ps9Equatable", "indexPathForPreferredFocusedViewInTableView"]
 - !private ["Ps9Equatable", "indexPathForRowAtPoint"]
@@ -1646,7 +1647,7 @@ depends-member:
 - ["C10SimpleTodo18MainViewController", "AppDelegate"]
 - !private ["C10SimpleTodo18MainViewController", "AudioServicesPlaySystemSound"]
 - ["C10SimpleTodo18MainViewController", "Bool"]
-- ["C10SimpleTodo18MainViewController", "CGFloat"]
+- !private ["C10SimpleTodo18MainViewController", "CGFloat"]
 - !private ["C10SimpleTodo18MainViewController", "CGPointMake"]
 - !private ["C10SimpleTodo18MainViewController", "ColorViewController"]
 - !private ["C10SimpleTodo18MainViewController", "DISPATCH_TIME_NOW"]
@@ -2209,7 +2210,7 @@ depends-member:
 - ["CSo8NSObject", "AppDelegate"]
 - !private ["CSo8NSObject", "AudioServicesPlaySystemSound"]
 - ["CSo8NSObject", "Bool"]
-- ["CSo8NSObject", "CGFloat"]
+- !private ["CSo8NSObject", "CGFloat"]
 - !private ["CSo8NSObject", "CGPointMake"]
 - !private ["CSo8NSObject", "ColorViewController"]
 - !private ["CSo8NSObject", "DISPATCH_TIME_NOW"]
@@ -3480,7 +3481,7 @@ depends-member:
 - ["CSo11UIResponder", "AppDelegate"]
 - !private ["CSo11UIResponder", "AudioServicesPlaySystemSound"]
 - ["CSo11UIResponder", "Bool"]
-- ["CSo11UIResponder", "CGFloat"]
+- !private ["CSo11UIResponder", "CGFloat"]
 - !private ["CSo11UIResponder", "CGPointMake"]
 - !private ["CSo11UIResponder", "ColorViewController"]
 - !private ["CSo11UIResponder", "DISPATCH_TIME_NOW"]
@@ -4269,7 +4270,7 @@ depends-member:
 - ["CSo16UIViewController", "AppDelegate"]
 - !private ["CSo16UIViewController", "AudioServicesPlaySystemSound"]
 - ["CSo16UIViewController", "Bool"]
-- ["CSo16UIViewController", "CGFloat"]
+- !private ["CSo16UIViewController", "CGFloat"]
 - !private ["CSo16UIViewController", "CGPointMake"]
 - !private ["CSo16UIViewController", "ColorViewController"]
 - !private ["CSo16UIViewController", "DISPATCH_TIME_NOW"]
@@ -4510,6 +4511,7 @@ depends-member:
 - !private ["Ps12_Reflectable", "frame"]
 - !private ["Ps12_Reflectable", "gadBannerInit"]
 - !private ["Ps12_Reflectable", "hashValue"]
+- !private ["Ps12_Reflectable", "height"]
 - !private ["Ps12_Reflectable", "hidden"]
 - !private ["Ps12_Reflectable", "indexPathForRowAtPoint"]
 - !private ["Ps12_Reflectable", "indexPathsForSelectedRows"]
@@ -4787,4 +4789,4 @@ depends-external:
 - "/Users/kenjou/Documents/SimpleToDo/SimpleTodo/Pods/Headers/Public/FirebaseAnalytics/FirebaseAnalytics/FIRAnalytics+AppDelegate.h"
 - "/Users/kenjou/Documents/SimpleToDo/SimpleTodo/Pods/Headers/Public/FirebaseAnalytics/FirebaseAnalytics/FirebaseAnalytics.h"
 - "/Users/kenjou/Documents/SimpleToDo/SimpleTodo/Pods/Firebase/Analytics/Sources/Firebase.h"
-interface-hash: "f4268118edbc333dfcaac3629cd2f0e5"
+interface-hash: "041ad6efebe051fae46db3ac2340fc6a"

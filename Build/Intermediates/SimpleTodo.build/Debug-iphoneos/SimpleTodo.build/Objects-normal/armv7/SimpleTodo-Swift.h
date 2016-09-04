@@ -114,6 +114,7 @@ SWIFT_CLASS("_TtC10SimpleTodo17AddViewController")
 @property (nonatomic, weak) IBOutlet UISwitch * _Null_unspecified returnSwitch;
 @property (nonatomic) BOOL swtichBool;
 - (void)viewDidLoad;
+- (void)viewWillAppear:(BOOL)animated;
 - (void)didReceiveMemoryWarning;
 - (IBAction)switchChange:(UISwitch * _Nonnull)sender;
 - (void)pushCancelButton;
@@ -292,7 +293,6 @@ SWIFT_CLASS("_TtC10SimpleTodo18MainViewController")
 - (NSInteger)numberOfSectionsInTableView:(UITableView * _Nonnull)tableView;
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section;
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
-- (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForHeaderInSection:(NSInteger)section;
 - (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 - (void)tableView:(UITableView * _Nonnull)tableView didDeselectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 - (void)setCheckedValue:(NSNumber * _Nonnull)value indexPath:(NSIndexPath * _Nonnull)indexPath;
@@ -351,6 +351,7 @@ SWIFT_CLASS("_TtC10SimpleTodo21SettingViewController")
 - (IBAction)soundChange:(UISwitch * _Nonnull)sender;
 - (IBAction)badgeChange:(UISwitch * _Nonnull)sender;
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+- (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 - (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 - (nonnull instancetype)initWithStyle:(UITableViewStyle)style OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;

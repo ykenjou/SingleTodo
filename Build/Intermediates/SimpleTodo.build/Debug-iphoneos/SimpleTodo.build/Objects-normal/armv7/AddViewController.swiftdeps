@@ -6,48 +6,49 @@ provides-nominal:
 provides-member:
 - ["C10SimpleTodo17AddViewController", ""]
 provides-dynamic-lookup:
-- "textView"
+- "swtichBool"
+- "switchChange"
+- "returnSwitch"
 - "pushSaveButton"
 - "didReceiveMemoryWarning"
+- "viewWillAppear"
 - "pushCancelButton"
-- "returnSwitch"
-- "switchChange"
-- "swtichBool"
+- "textView"
 - "viewDidLoad"
 depends-top-level:
-- !private "UIAlertActionStyle"
-- !private "&&"
-- "BooleanLiteralType"
-- !private "UIToolbar"
-- !private "UnicodeScalarType"
+- !private "UIColor"
 - !private "+"
-- !private "Array"
-- !private "NSFetchRequest"
 - !private "String"
+- "BooleanLiteralType"
+- !private "Array"
+- !private "UIAlertAction"
+- !private "&&"
+- !private "NSFetchRequest"
+- !private "UnicodeScalarType"
 - !private "NSError"
-- "UITextView"
-- !private "..<"
-- "Bool"
-- !private "UIAlertController"
-- !private "Item"
+- !private "UIApplication"
+- !private "!="
+- !private "UIToolbar"
+- !private "UIAlertActionStyle"
 - !private "CGRect"
 - !private "UIBarStyle"
-- !private "NSEntityDescription"
-- !private "UIAlertControllerStyle"
-- !private "UIBarButtonSystemItem"
-- !private "!="
-- !private "UIColor"
-- "UISwitch"
-- !private "UIApplication"
-- !private "Void"
-- "UIViewController"
-- !private "AppDelegate"
-- !private "StringLiteralType"
-- !private "NSCharacterSet"
-- "AddViewController"
-- !private "=="
+- !private "Item"
+- !private "UIAlertController"
 - !private "UIBarButtonItem"
-- !private "UIAlertAction"
+- "UISwitch"
+- "UITextView"
+- "AddViewController"
+- !private "StringLiteralType"
+- !private "AppDelegate"
+- !private "NSCharacterSet"
+- !private "UIAlertControllerStyle"
+- !private "Void"
+- !private "..<"
+- !private "NSEntityDescription"
+- !private "UIBarButtonSystemItem"
+- "UIViewController"
+- !private "=="
+- "Bool"
 depends-member:
 - !private ["C10SimpleTodo17AddViewController", "AddViewController"]
 - !private ["C10SimpleTodo17AddViewController", "AppDelegate"]
@@ -86,6 +87,7 @@ depends-member:
 - ["C10SimpleTodo17AddViewController", "textView"]
 - !private ["C10SimpleTodo17AddViewController", "view"]
 - ["C10SimpleTodo17AddViewController", "viewDidLoad"]
+- ["C10SimpleTodo17AddViewController", "viewWillAppear"]
 - !private ["Ps9AnyObject", "AddViewController"]
 - !private ["Ps9AnyObject", "CGColor"]
 - !private ["Ps9AnyObject", "CGRect"]
@@ -141,6 +143,7 @@ depends-member:
 - ["Ps9AnyObject", "textView"]
 - !private ["Ps9AnyObject", "view"]
 - ["Ps9AnyObject", "viewDidLoad"]
+- ["Ps9AnyObject", "viewWillAppear"]
 - ["Ps9AnyObject", ""]
 - !private ["C10SimpleTodo11AppDelegate", "managedObjectContext"]
 - !private ["C10SimpleTodo11AppDelegate", "saveContext"]
@@ -235,6 +238,7 @@ depends-member:
 - ["Ps11CVarArgType", "textView"]
 - !private ["Ps11CVarArgType", "view"]
 - ["Ps11CVarArgType", "viewDidLoad"]
+- ["Ps11CVarArgType", "viewWillAppear"]
 - ["Ps11CVarArgType", ""]
 - !private ["Ps14CollectionType", "Element"]
 - !private ["Ps14CollectionType", "Generator"]
@@ -310,6 +314,7 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "textView"]
 - !private ["Ps28CustomDebugStringConvertible", "view"]
 - ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
+- ["Ps28CustomDebugStringConvertible", "viewWillAppear"]
 - ["Ps28CustomDebugStringConvertible", ""]
 - !private ["Ps23CustomStringConvertible", "AddViewController"]
 - !private ["Ps23CustomStringConvertible", "CGColor"]
@@ -376,6 +381,7 @@ depends-member:
 - ["Ps23CustomStringConvertible", "textView"]
 - !private ["Ps23CustomStringConvertible", "view"]
 - ["Ps23CustomStringConvertible", "viewDidLoad"]
+- ["Ps23CustomStringConvertible", "viewWillAppear"]
 - ["Ps23CustomStringConvertible", ""]
 - !private ["Ps9Equatable", "ActionSheet"]
 - !private ["Ps9Equatable", "AddViewController"]
@@ -443,6 +449,7 @@ depends-member:
 - ["Ps9Equatable", "textView"]
 - !private ["Ps9Equatable", "view"]
 - ["Ps9Equatable", "viewDidLoad"]
+- ["Ps9Equatable", "viewWillAppear"]
 - !private ["Ps9Equatable", "width"]
 - ["Ps9Equatable", ""]
 - !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "componentsSeparatedByString"]
@@ -519,6 +526,7 @@ depends-member:
 - ["Ps8Hashable", "textView"]
 - !private ["Ps8Hashable", "view"]
 - ["Ps8Hashable", "viewDidLoad"]
+- ["Ps8Hashable", "viewWillAppear"]
 - ["Ps8Hashable", ""]
 - !private ["SQ", "deinit"]
 - !private ["Ps9Indexable", "Element"]
@@ -619,6 +627,7 @@ depends-member:
 - ["PSo8NSCoding", "textView"]
 - !private ["PSo8NSCoding", "view"]
 - ["PSo8NSCoding", "viewDidLoad"]
+- ["PSo8NSCoding", "viewWillAppear"]
 - ["PSo8NSCoding", ""]
 - !private ["PSo9NSCopying", "CGColor"]
 - !private ["PSo9NSCopying", "componentsSeparatedByString"]
@@ -658,6 +667,7 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "textView"]
 - !private ["PSo26NSExtensionRequestHandling", "view"]
 - ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
+- ["PSo26NSExtensionRequestHandling", "viewWillAppear"]
 - ["PSo26NSExtensionRequestHandling", ""]
 - !private ["PSo17NSFastEnumeration", "insertNewObjectForEntityForName"]
 - !private ["CSo14NSFetchRequest", "init"]
@@ -735,6 +745,7 @@ depends-member:
 - ["CSo8NSObject", "textView"]
 - !private ["CSo8NSObject", "view"]
 - ["CSo8NSObject", "viewDidLoad"]
+- ["CSo8NSObject", "viewWillAppear"]
 - !private ["PSo16NSObjectProtocol", "AddViewController"]
 - !private ["PSo16NSObjectProtocol", "CGColor"]
 - !private ["PSo16NSObjectProtocol", "CGRect"]
@@ -790,6 +801,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "textView"]
 - !private ["PSo16NSObjectProtocol", "view"]
 - ["PSo16NSObjectProtocol", "viewDidLoad"]
+- ["PSo16NSObjectProtocol", "viewWillAppear"]
 - ["PSo16NSObjectProtocol", ""]
 - !private ["CSo24NSPersistentStoreRequest", "init"]
 - !private ["PSo14NSSecureCoding", "CGColor"]
@@ -918,6 +930,7 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "textView"]
 - !private ["PSo21UIAppearanceContainer", "view"]
 - ["PSo21UIAppearanceContainer", "viewDidLoad"]
+- ["PSo21UIAppearanceContainer", "viewWillAppear"]
 - ["PSo21UIAppearanceContainer", ""]
 - !private ["CSo13UIApplication", "delegate"]
 - !private ["CSo13UIApplication", "sharedApplication"]
@@ -963,6 +976,7 @@ depends-member:
 - ["PSo18UIContentContainer", "textView"]
 - !private ["PSo18UIContentContainer", "view"]
 - ["PSo18UIContentContainer", "viewDidLoad"]
+- ["PSo18UIContentContainer", "viewWillAppear"]
 - ["PSo18UIContentContainer", ""]
 - !private ["CSo9UIControl", "on"]
 - !private ["PSo17UICoordinateSpace", "barStyle"]
@@ -1023,6 +1037,7 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "textView"]
 - !private ["PSo18UIFocusEnvironment", "view"]
 - ["PSo18UIFocusEnvironment", "viewDidLoad"]
+- ["PSo18UIFocusEnvironment", "viewWillAppear"]
 - ["PSo18UIFocusEnvironment", ""]
 - !private ["PSo10UIKeyInput", "becomeFirstResponder"]
 - !private ["PSo10UIKeyInput", "inputAccessoryView"]
@@ -1079,6 +1094,7 @@ depends-member:
 - ["CSo11UIResponder", "textView"]
 - !private ["CSo11UIResponder", "view"]
 - ["CSo11UIResponder", "viewDidLoad"]
+- ["CSo11UIResponder", "viewWillAppear"]
 - !private ["CSo12UIScrollView", "becomeFirstResponder"]
 - !private ["CSo12UIScrollView", "inputAccessoryView"]
 - !private ["CSo12UIScrollView", "layer"]
@@ -1113,6 +1129,7 @@ depends-member:
 - ["PSo16UIStateRestoring", "textView"]
 - !private ["PSo16UIStateRestoring", "view"]
 - ["PSo16UIStateRestoring", "viewDidLoad"]
+- ["PSo16UIStateRestoring", "viewWillAppear"]
 - ["PSo16UIStateRestoring", ""]
 - !private ["CSo8UISwitch", "on"]
 - !private ["PSo11UITextInput", "becomeFirstResponder"]
@@ -1171,6 +1188,7 @@ depends-member:
 - ["PSo18UITraitEnvironment", "textView"]
 - !private ["PSo18UITraitEnvironment", "view"]
 - ["PSo18UITraitEnvironment", "viewDidLoad"]
+- ["PSo18UITraitEnvironment", "viewWillAppear"]
 - ["PSo18UITraitEnvironment", ""]
 - !private ["CSo6UIView", "barStyle"]
 - !private ["CSo6UIView", "becomeFirstResponder"]
@@ -1219,6 +1237,7 @@ depends-member:
 - ["CSo16UIViewController", "textView"]
 - !private ["CSo16UIViewController", "view"]
 - ["CSo16UIViewController", "viewDidLoad"]
+- ["CSo16UIViewController", "viewWillAppear"]
 - ["CSo16UIViewController", ""]
 - !private ["Ps31UnicodeScalarLiteralConvertible", "componentsSeparatedByString"]
 - !private ["Ps31UnicodeScalarLiteralConvertible", "containsString"]
@@ -1522,4 +1541,4 @@ depends-external:
 - "/Users/kenjou/Documents/SimpleToDo/SimpleTodo/Pods/Headers/Public/FirebaseAnalytics/FirebaseAnalytics/FIRAnalytics+AppDelegate.h"
 - "/Users/kenjou/Documents/SimpleToDo/SimpleTodo/Pods/Headers/Public/FirebaseAnalytics/FirebaseAnalytics/FirebaseAnalytics.h"
 - "/Users/kenjou/Documents/SimpleToDo/SimpleTodo/Pods/Firebase/Analytics/Sources/Firebase.h"
-interface-hash: "c0ae86ac957626b582e91a28c66a104e"
+interface-hash: "0ae5b1b312183b2e09d01b3ee231679d"

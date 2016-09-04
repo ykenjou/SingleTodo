@@ -14,9 +14,7 @@ import GoogleMobileAds
 class MainViewController:  UIViewController , UITableViewDataSource , UITableViewDelegate , NSFetchedResultsControllerDelegate , UIGestureRecognizerDelegate ,UINavigationControllerDelegate , GADBannerViewDelegate{
     
     @IBOutlet weak var tableView: UITableView!
-    
     @IBOutlet weak var btmToolBar: UIToolbar!
-    
     @IBOutlet weak var popMessageView: UIView!
     
     var appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
@@ -24,7 +22,6 @@ class MainViewController:  UIViewController , UITableViewDataSource , UITableVie
     let userDefaults = NSUserDefaults.standardUserDefaults()
     
     let gadController = GadController()
-    
     var bannerView:GADBannerView? = nil
     
     @IBOutlet weak var btmToolBarConstraint: NSLayoutConstraint!
@@ -82,8 +79,6 @@ class MainViewController:  UIViewController , UITableViewDataSource , UITableVie
         btmToolBar.tintColor = UIColor.whiteColor()
         btmToolBar.translucent = false
         
-        
-        
         //セル長押し設定
         let longPressRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(MainViewController.cellLongPressed(_:)))
         longPressRecognizer.delegate = self
@@ -92,17 +87,13 @@ class MainViewController:  UIViewController , UITableViewDataSource , UITableVie
         if userDefaults.boolForKey("firstLaunch") {
             setFirstItemData("下にある＋ボタンを押して項目を追加してください", checked: 0)
             setFirstItemData("左下のゴミ箱ボタンでチェック済みの項目を削除できます", checked: 1)
+            setFirstItemData("項目の長押しでテキストを編集できます", checked: 0)
             userDefaults.setBool(false, forKey: "firstLaunch")
         }
         
         bannerView = gadController.gadBannerInit(self.view.frame.width, frameHeight: 50, viewController: self)
-        //bannerView!.frame.origin = CGPointMake(0, self.view.frame.height - 50)
-        //bannerView!.frame.origin = CGPointMake(0, 560)
-        //print(self.view.frame.height)
         
         popMessageView.layer.cornerRadius = 10
-        
-        
         
     }
     
@@ -241,14 +232,7 @@ class MainViewController:  UIViewController , UITableViewDataSource , UITableVie
         
         if let sections = fetchedResultsController.sections {
             let currentSection = sections[section]
-            /*
-            if currentSection.numberOfObjects == 0{
-                firstView.hidden = false
-                
-            } else {
-                firstView.hidden = true
-            }
-            */
+
             return currentSection.numberOfObjects
         }
         

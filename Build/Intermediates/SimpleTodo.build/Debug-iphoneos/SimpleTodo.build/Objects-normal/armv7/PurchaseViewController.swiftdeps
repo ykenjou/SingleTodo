@@ -6,50 +6,50 @@ provides-nominal:
 provides-member:
 - ["C10SimpleTodo22PurchaseViewController", ""]
 provides-dynamic-lookup:
-- "startRestore"
-- "purchaseManager"
-- "purchaseManager"
-- "purchaseManager"
-- "purchaseActivityView"
-- "didReceiveMemoryWarning"
-- "purchaseManagerDidFinishRestore"
 - "purchaseManagerDidDeferred"
-- "restoreButton"
-- "viewDidLoad"
-- "startPurchase"
+- "userDefaults"
 - "statusLabel"
 - "buttonStatusChange"
+- "purchaseManagerDidFinishRestore"
+- "startRestore"
 - "purchaseButton"
-- "userDefaults"
-- "pushPurchaseButton"
-- "pushRestoreButton"
 - "buttonActivityView"
+- "startPurchase"
+- "viewDidLoad"
+- "pushRestoreButton"
+- "purchaseActivityView"
+- "pushPurchaseButton"
+- "restoreButton"
+- "purchaseManager"
+- "purchaseManager"
+- "purchaseManager"
+- "didReceiveMemoryWarning"
 depends-top-level:
-- "PurchaseViewController"
-- "UIActivityIndicatorView"
-- !private "UIAlertController"
-- !private "CGPointMake"
-- !private ">"
-- "NSError"
-- "UIViewController"
-- "String"
-- !private "SKProduct"
-- !private "UIColor"
-- !private "BooleanLiteralType"
+- "XXXPurchaseManager"
+- !private "UIActivityIndicatorViewStyle"
+- "UILabel"
 - !private "XXXProductManager"
 - "NSUserDefaults"
-- !private "/"
-- "XXXPurchaseManagerDelegate"
-- !private "UIAlertAction"
-- "UILabel"
-- "SKPaymentTransaction"
+- !private "BooleanLiteralType"
 - "UIButton"
-- !private "StringLiteralType"
-- !private "Array"
-- "Bool"
-- "XXXPurchaseManager"
+- !private ">"
+- !private "UIAlertAction"
+- "XXXPurchaseManagerDelegate"
+- !private "/"
 - "Void"
-- !private "UIActivityIndicatorViewStyle"
+- "String"
+- !private "Array"
+- !private "StringLiteralType"
+- "NSError"
+- "UIActivityIndicatorView"
+- "SKPaymentTransaction"
+- "UIViewController"
+- "Bool"
+- !private "UIAlertController"
+- !private "CGPointMake"
+- !private "UIColor"
+- "PurchaseViewController"
+- !private "SKProduct"
 depends-member:
 - !private ["Ps9AnyObject", "CGColor"]
 - !private ["Ps9AnyObject", "CGPointMake"]
@@ -105,6 +105,7 @@ depends-member:
 - !private ["Ps9AnyObject", "stopAnimating"]
 - !private ["Ps9AnyObject", "text"]
 - ["Ps9AnyObject", "userDefaults"]
+- !private ["Ps9AnyObject", "view"]
 - ["Ps9AnyObject", "viewDidLoad"]
 - ["Ps9AnyObject", ""]
 - !private ["Sa", "Element"]
@@ -199,6 +200,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "stopAnimating"]
 - !private ["Ps11CVarArgType", "text"]
 - ["Ps11CVarArgType", "userDefaults"]
+- !private ["Ps11CVarArgType", "view"]
 - ["Ps11CVarArgType", "viewDidLoad"]
 - ["Ps11CVarArgType", ""]
 - !private ["Ps14CollectionType", "Element"]
@@ -271,6 +273,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "subscript"]
 - !private ["Ps28CustomDebugStringConvertible", "text"]
 - ["Ps28CustomDebugStringConvertible", "userDefaults"]
+- !private ["Ps28CustomDebugStringConvertible", "view"]
 - ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
 - ["Ps28CustomDebugStringConvertible", ""]
 - !private ["Ps23CustomStringConvertible", "CGColor"]
@@ -337,6 +340,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "subscript"]
 - !private ["Ps23CustomStringConvertible", "text"]
 - ["Ps23CustomStringConvertible", "userDefaults"]
+- !private ["Ps23CustomStringConvertible", "view"]
 - ["Ps23CustomStringConvertible", "viewDidLoad"]
 - ["Ps23CustomStringConvertible", ""]
 - !private ["Ps9Equatable", "Alert"]
@@ -403,6 +407,7 @@ depends-member:
 - !private ["Ps9Equatable", "stopAnimating"]
 - !private ["Ps9Equatable", "text"]
 - ["Ps9Equatable", "userDefaults"]
+- !private ["Ps9Equatable", "view"]
 - ["Ps9Equatable", "viewDidLoad"]
 - !private ["Ps9Equatable", "width"]
 - ["Ps9Equatable", ""]
@@ -470,6 +475,7 @@ depends-member:
 - !private ["Ps8Hashable", "stopAnimating"]
 - !private ["Ps8Hashable", "text"]
 - ["Ps8Hashable", "userDefaults"]
+- !private ["Ps8Hashable", "view"]
 - ["Ps8Hashable", "viewDidLoad"]
 - ["Ps8Hashable", ""]
 - !private ["SQ", "Generator"]
@@ -559,6 +565,7 @@ depends-member:
 - !private ["PSo8NSCoding", "stopAnimating"]
 - !private ["PSo8NSCoding", "text"]
 - ["PSo8NSCoding", "userDefaults"]
+- !private ["PSo8NSCoding", "view"]
 - ["PSo8NSCoding", "viewDidLoad"]
 - ["PSo8NSCoding", ""]
 - !private ["PSo9NSCopying", "CGColor"]
@@ -593,6 +600,7 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "startRestore"]
 - ["PSo26NSExtensionRequestHandling", "statusLabel"]
 - ["PSo26NSExtensionRequestHandling", "userDefaults"]
+- !private ["PSo26NSExtensionRequestHandling", "view"]
 - ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
 - ["PSo26NSExtensionRequestHandling", ""]
 - ["CSo8NSObject", "Bool"]
@@ -657,6 +665,7 @@ depends-member:
 - !private ["CSo8NSObject", "stopAnimating"]
 - !private ["CSo8NSObject", "text"]
 - ["CSo8NSObject", "userDefaults"]
+- !private ["CSo8NSObject", "view"]
 - ["CSo8NSObject", "viewDidLoad"]
 - !private ["PSo16NSObjectProtocol", "CGColor"]
 - !private ["PSo16NSObjectProtocol", "CGPointMake"]
@@ -712,6 +721,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "stopAnimating"]
 - !private ["PSo16NSObjectProtocol", "text"]
 - ["PSo16NSObjectProtocol", "userDefaults"]
+- !private ["PSo16NSObjectProtocol", "view"]
 - ["PSo16NSObjectProtocol", "viewDidLoad"]
 - ["PSo16NSObjectProtocol", ""]
 - !private ["PSo14NSSecureCoding", "CGColor"]
@@ -759,6 +769,7 @@ depends-member:
 - ["C10SimpleTodo22PurchaseViewController", "startRestore"]
 - ["C10SimpleTodo22PurchaseViewController", "statusLabel"]
 - ["C10SimpleTodo22PurchaseViewController", "userDefaults"]
+- !private ["C10SimpleTodo22PurchaseViewController", "view"]
 - ["C10SimpleTodo22PurchaseViewController", "viewDidLoad"]
 - !private ["Ps21RandomAccessIndexType", "Distance"]
 - !private ["Ps21RandomAccessIndexType", "IntegerLiteralType"]
@@ -881,6 +892,7 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "stopAnimating"]
 - !private ["PSo21UIAppearanceContainer", "text"]
 - ["PSo21UIAppearanceContainer", "userDefaults"]
+- !private ["PSo21UIAppearanceContainer", "view"]
 - ["PSo21UIAppearanceContainer", "viewDidLoad"]
 - ["PSo21UIAppearanceContainer", ""]
 - !private ["CSo8UIButton", "addSubview"]
@@ -919,6 +931,7 @@ depends-member:
 - ["PSo18UIContentContainer", "startRestore"]
 - ["PSo18UIContentContainer", "statusLabel"]
 - ["PSo18UIContentContainer", "userDefaults"]
+- !private ["PSo18UIContentContainer", "view"]
 - ["PSo18UIContentContainer", "viewDidLoad"]
 - ["PSo18UIContentContainer", ""]
 - !private ["CSo9UIControl", "addSubview"]
@@ -998,6 +1011,7 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "stopAnimating"]
 - !private ["PSo18UIFocusEnvironment", "text"]
 - ["PSo18UIFocusEnvironment", "userDefaults"]
+- !private ["PSo18UIFocusEnvironment", "view"]
 - ["PSo18UIFocusEnvironment", "viewDidLoad"]
 - ["PSo18UIFocusEnvironment", ""]
 - !private ["CSo7UILabel", "text"]
@@ -1049,6 +1063,7 @@ depends-member:
 - !private ["CSo11UIResponder", "stopAnimating"]
 - !private ["CSo11UIResponder", "text"]
 - ["CSo11UIResponder", "userDefaults"]
+- !private ["CSo11UIResponder", "view"]
 - ["CSo11UIResponder", "viewDidLoad"]
 - !private ["PSo16UIStateRestoring", "CGPointMake"]
 - ["PSo16UIStateRestoring", "NSUserDefaults"]
@@ -1077,6 +1092,7 @@ depends-member:
 - ["PSo16UIStateRestoring", "startRestore"]
 - ["PSo16UIStateRestoring", "statusLabel"]
 - ["PSo16UIStateRestoring", "userDefaults"]
+- !private ["PSo16UIStateRestoring", "view"]
 - ["PSo16UIStateRestoring", "viewDidLoad"]
 - ["PSo16UIStateRestoring", ""]
 - !private ["PSo18UITraitEnvironment", "CGPointMake"]
@@ -1119,6 +1135,7 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "stopAnimating"]
 - !private ["PSo18UITraitEnvironment", "text"]
 - ["PSo18UITraitEnvironment", "userDefaults"]
+- !private ["PSo18UITraitEnvironment", "view"]
 - ["PSo18UITraitEnvironment", "viewDidLoad"]
 - ["PSo18UITraitEnvironment", ""]
 - !private ["CSo6UIView", "activityIndicatorViewStyle"]
@@ -1170,6 +1187,7 @@ depends-member:
 - ["CSo16UIViewController", "startRestore"]
 - ["CSo16UIViewController", "statusLabel"]
 - ["CSo16UIViewController", "userDefaults"]
+- !private ["CSo16UIViewController", "view"]
 - ["CSo16UIViewController", "viewDidLoad"]
 - ["CSo16UIViewController", ""]
 - !private ["C10SimpleTodo17XXXProductManager", "priceStringFromProduct"]
@@ -1190,6 +1208,7 @@ depends-member:
 - !private ["P10SimpleTodo26XXXPurchaseManagerDelegate", "buttonActivityView"]
 - !private ["P10SimpleTodo26XXXPurchaseManagerDelegate", "buttonStatusChange"]
 - !private ["P10SimpleTodo26XXXPurchaseManagerDelegate", "presentViewController"]
+- !private ["P10SimpleTodo26XXXPurchaseManagerDelegate", "purchaseActivityView"]
 - !private ["P10SimpleTodo26XXXPurchaseManagerDelegate", "purchaseButton"]
 - ["P10SimpleTodo26XXXPurchaseManagerDelegate", "purchaseManager"]
 - ["P10SimpleTodo26XXXPurchaseManagerDelegate", "purchaseManagerDidDeferred"]
@@ -1199,6 +1218,7 @@ depends-member:
 - !private ["P10SimpleTodo26XXXPurchaseManagerDelegate", "startRestore"]
 - !private ["P10SimpleTodo26XXXPurchaseManagerDelegate", "statusLabel"]
 - !private ["P10SimpleTodo26XXXPurchaseManagerDelegate", "userDefaults"]
+- !private ["P10SimpleTodo26XXXPurchaseManagerDelegate", "view"]
 - ["P10SimpleTodo26XXXPurchaseManagerDelegate", ""]
 - !private ["Ps10_ArrayType", "Element"]
 - !private ["Ps10_ArrayType", "Generator"]

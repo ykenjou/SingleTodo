@@ -204,7 +204,7 @@
             </objects>
             <point key="canvasLocation" x="1868" y="769"/>
         </scene>
-        <!--Select Color-->
+        <!--Color-->
         <scene sceneID="fIL-RJ-P9r">
             <objects>
                 <viewController id="YMn-i1-h1D" customClass="ColorViewController" customModule="SimpleTodo" customModuleProvider="target" sceneMemberID="viewController">
@@ -310,7 +310,7 @@
                             <constraint firstItem="ubj-LG-PgT" firstAttribute="leading" secondItem="Lrn-M5-wqc" secondAttribute="leading" constant="30" id="IuW-t0-Ipe"/>
                             <constraint firstAttribute="trailing" secondItem="GEw-Lh-sxz" secondAttribute="trailing" constant="30" id="KCU-EB-bxn"/>
                             <constraint firstItem="GEw-Lh-sxz" firstAttribute="leading" secondItem="Lrn-M5-wqc" secondAttribute="leading" constant="30" id="OHt-XU-qyZ"/>
-                            <constraint firstItem="Rl2-Ua-VW3" firstAttribute="top" secondItem="b9n-AG-tht" secondAttribute="bottom" constant="25" id="Qyg-ny-nYG"/>
+                            <constraint firstItem="Rl2-Ua-VW3" firstAttribute="top" secondItem="b9n-AG-tht" secondAttribute="bottom" constant="30" id="Qyg-ny-nYG"/>
                             <constraint firstItem="O0k-AO-GZ6" firstAttribute="top" secondItem="GEw-Lh-sxz" secondAttribute="bottom" constant="30" id="T4W-Lw-Jm3"/>
                             <constraint firstItem="NRm-dN-iTa" firstAttribute="top" secondItem="NZF-9K-ToH" secondAttribute="bottom" constant="30" id="UL6-k2-xln"/>
                             <constraint firstItem="O0k-AO-GZ6" firstAttribute="leading" secondItem="Lrn-M5-wqc" secondAttribute="leading" constant="30" id="ULw-7c-Z5B"/>
@@ -326,7 +326,7 @@
                             <constraint firstAttribute="trailing" secondItem="O0k-AO-GZ6" secondAttribute="trailing" constant="30" id="vIg-8s-UL8"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Select Color" id="zVh-yw-8Pz"/>
+                    <navigationItem key="navigationItem" title="Color" id="zVh-yw-8Pz"/>
                     <connections>
                         <outlet property="blueButton" destination="Rl2-Ua-VW3" id="lNG-l6-LfC"/>
                         <outlet property="darkgrayButton" destination="O0k-AO-GZ6" id="bKD-24-a1k"/>

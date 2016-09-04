@@ -129,6 +129,14 @@ class SettingViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        let upgradeTestCell = NSIndexPath(forRow: 1, inSection: 0)
+        if indexPath == upgradeTestCell {
+            return 0
+        }
+        return 44
+    }
+    
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let feedbackCell = NSIndexPath(forRow: 0, inSection: 3)
         if indexPath == feedbackCell {

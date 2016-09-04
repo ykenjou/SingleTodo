@@ -6,43 +6,45 @@ provides-nominal:
 provides-member:
 - ["C10SimpleTodo21SettingViewController", ""]
 provides-dynamic-lookup:
-- "mainViewController"
 - "fontSizeSubLabel"
-- "badgeSwitch"
 - "soundChange"
+- "badgeSwitch"
+- "viewDidLoad"
 - "tableView"
 - "tableView"
-- "didReceiveMemoryWarning"
-- "userDefaults"
-- "badgeChange"
+- "tableView"
+- "mainViewController"
 - "viewWillAppear"
+- "badgeChange"
 - "adSwitch"
+- "userDefaults"
 - "settingStoryboard"
 - "adChange"
 - "soundSwitch"
-- "viewDidLoad"
+- "didReceiveMemoryWarning"
 depends-top-level:
-- "NSIndexPath"
-- "Bool"
-- !private "String"
-- !private "+"
-- "UITableViewController"
-- !private "UITableViewCellSelectionStyle"
-- !private "UIApplication"
-- "NSUserDefaults"
-- "UIStoryboard"
-- !private "NSURL"
-- "UILabel"
-- "UITableView"
-- !private "BooleanLiteralType"
-- "SettingViewController"
 - "UIViewController"
-- !private "UIView"
+- "UIStoryboard"
 - !private "=="
-- !private "StringLiteralType"
+- "UITableView"
 - "UISwitch"
-- !private "MainViewController"
+- !private "NSURL"
+- !private "+"
+- !private "StringLiteralType"
+- "NSIndexPath"
+- "SettingViewController"
+- !private "String"
 - "UITableViewCell"
+- "Bool"
+- "CGFloat"
+- !private "UIView"
+- !private "MainViewController"
+- "UITableViewController"
+- "UILabel"
+- !private "BooleanLiteralType"
+- "NSUserDefaults"
+- !private "UIApplication"
+- !private "UITableViewCellSelectionStyle"
 depends-member:
 - !private ["Ps9AnyObject", "MainViewController"]
 - !private ["Ps9AnyObject", "NSIndexPath"]
@@ -379,6 +381,7 @@ depends-member:
 - !private ["PSo34NSFetchedResultsControllerDelegate", "setBadgeValue"]
 - !private ["CSo11NSIndexPath", "init"]
 - ["CSo8NSObject", "Bool"]
+- ["CSo8NSObject", "CGFloat"]
 - !private ["CSo8NSObject", "MainViewController"]
 - ["CSo8NSObject", "NSIndexPath"]
 - !private ["CSo8NSObject", "NSURL"]
@@ -473,6 +476,7 @@ depends-member:
 - !private ["Ps21RandomAccessIndexType", "IntegerLiteralType"]
 - !private ["Ps16RawRepresentable", "None"]
 - ["C10SimpleTodo21SettingViewController", "Bool"]
+- ["C10SimpleTodo21SettingViewController", "CGFloat"]
 - !private ["C10SimpleTodo21SettingViewController", "MainViewController"]
 - ["C10SimpleTodo21SettingViewController", "NSIndexPath"]
 - !private ["C10SimpleTodo21SettingViewController", "NSURL"]
@@ -639,6 +643,7 @@ depends-member:
 - !private ["PSo30UINavigationControllerDelegate", "init"]
 - !private ["PSo30UINavigationControllerDelegate", "setBadgeValue"]
 - ["CSo11UIResponder", "Bool"]
+- ["CSo11UIResponder", "CGFloat"]
 - !private ["CSo11UIResponder", "MainViewController"]
 - ["CSo11UIResponder", "NSIndexPath"]
 - !private ["CSo11UIResponder", "NSURL"]
@@ -742,6 +747,7 @@ depends-member:
 - !private ["CSo15UITableViewCell", "selectionStyle"]
 - !private ["OSC29UITableViewCellSelectionStyle", "None"]
 - ["CSo21UITableViewController", "Bool"]
+- ["CSo21UITableViewController", "CGFloat"]
 - !private ["CSo21UITableViewController", "MainViewController"]
 - ["CSo21UITableViewController", "NSIndexPath"]
 - !private ["CSo21UITableViewController", "NSURL"]
@@ -864,6 +870,7 @@ depends-member:
 - !private ["CSo6UIView", "tableFooterView"]
 - !private ["CSo6UIView", "text"]
 - ["CSo16UIViewController", "Bool"]
+- ["CSo16UIViewController", "CGFloat"]
 - !private ["CSo16UIViewController", "MainViewController"]
 - ["CSo16UIViewController", "NSIndexPath"]
 - !private ["CSo16UIViewController", "NSURL"]
@@ -1097,4 +1104,4 @@ depends-external:
 - "/Users/kenjou/Documents/SimpleToDo/SimpleTodo/Pods/Headers/Public/FirebaseAnalytics/FirebaseAnalytics/FIRAnalytics+AppDelegate.h"
 - "/Users/kenjou/Documents/SimpleToDo/SimpleTodo/Pods/Headers/Public/FirebaseAnalytics/FirebaseAnalytics/FirebaseAnalytics.h"
 - "/Users/kenjou/Documents/SimpleToDo/SimpleTodo/Pods/Firebase/Analytics/Sources/Firebase.h"
-interface-hash: "d7c536b94a9bc4e3bf398a3798ebfef6"
+interface-hash: "e02a6e8006405eb09ce74c8660ca9fcd"
